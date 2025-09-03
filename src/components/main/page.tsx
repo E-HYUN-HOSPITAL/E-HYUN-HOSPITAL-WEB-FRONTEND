@@ -1,7 +1,7 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { Image } from '../common/image/Image';
 import Slider from 'react-slick';
@@ -18,6 +18,8 @@ const Images: string[] = [
 export const MainPageComponent = () => {
   const [choose, setChoose] = useState<string>('');
   const sliderRef = useRef<Slider>(null);
+
+  useEffect(() => console.log(choose), []);
 
   const settings = {
     arrows: false,
