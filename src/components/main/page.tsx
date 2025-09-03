@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 
 import { Image } from '../common/image/Image';
 import Slider from 'react-slick';
+import { ToolBar } from '../common/toolBar/ToolBar';
 import styles from './mainPage.module.scss';
 
 const Images: string[] = [
@@ -74,6 +75,8 @@ export const MainPageComponent = () => {
         className={styles.rightBtn}
         onClick={goToNext}
       />
+
+      <ToolBar />
     </div>
   );
 };
