@@ -1,0 +1,41 @@
+// mainPage.module.scss
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .titleBox {
+    width: 100%;
+    position: absolute;
+    top: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .subText {
+      color: #fff;
+      font-size: 1.4em;
+      font-weight: 400;
+    }
+    .mainTitle {
+      width: 30rem;
+    }
+    .engSubTitle {
+      width: 15rem;
+    }
+  }
+
+  .leftBtn {
+    position: absolute;
+    width: 2rem;
+    left: 3rem;
+  }
+
+  .rightBtn {
+    position: absolute;
+    width: 2rem;
+    right: 3rem;
+  }
+}
