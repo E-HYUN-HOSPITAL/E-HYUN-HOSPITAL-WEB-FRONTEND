@@ -9,7 +9,6 @@ export const ToolBar = () => {
       <GoKakaoBtn onClick={() => console.log('카카오톡 상담 연결')} />
       <EtcInfoBox />
       <GoTopScreenBtn />
-      <div> dd</div>
     </div>
   );
 };
