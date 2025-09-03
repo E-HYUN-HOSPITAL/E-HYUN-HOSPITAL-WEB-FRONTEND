@@ -1,7 +1,7 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { useRef, useState } from 'react'; // useRef 추가
+import { useRef, useState } from 'react';
 
 import { Image } from '../common/image/Image';
 import Slider from 'react-slick';
@@ -16,7 +16,7 @@ const Images: string[] = [
 
 export const MainPageComponent = () => {
   const [choose, setChoose] = useState<string>('');
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<Slider>(null);
 
   const settings = {
     arrows: false,
@@ -31,11 +31,15 @@ export const MainPageComponent = () => {
   };
 
   const goToPrev = () => {
-    sliderRef.current.slickPrev();
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
   };
 
   const goToNext = () => {
-    sliderRef.current.slickNext();
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
   };
 
   return (
