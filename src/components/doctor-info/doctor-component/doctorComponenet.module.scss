@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  img {
+    width: 20%;
+  }
+
+  .infos {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .major {
+      color: #70605a;
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+
+    .name,
+    .specialty {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+
+    .education,
+    .membership {
+      color: #787878;
+      font-size: 0.6em;
+      font-weight: 400;
+      margin: 1rem 0;
+    }
+  }
+}
