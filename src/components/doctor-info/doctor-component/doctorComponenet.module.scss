@@ -1,4 +1,5 @@
 .container {
+  height: 20rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -7,15 +8,17 @@
   gap: 2rem;
 
   img {
-    width: 20%;
+    height: 100%;
   }
 
   .infos {
     width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    gap: 0.2rem;
 
     .major {
       color: #70605a;
@@ -29,12 +32,19 @@
       font-weight: 700;
     }
 
-    .education,
-    .membership {
-      color: #787878;
-      font-size: 0.6em;
-      font-weight: 400;
-      margin: 1rem 0;
+    .subInfos {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .education,
+      .membership {
+        color: #787878;
+        font-size: 1em;
+        font-weight: 400;
+        margin: 1rem 0;
+      }
     }
   }
 }

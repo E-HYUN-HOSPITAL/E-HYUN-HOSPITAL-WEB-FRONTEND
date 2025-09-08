@@ -21,15 +21,17 @@ export const DoctorComponent = ({ doctorName }: Props) => {
           {doctorInfo.position} {doctorName}
         </div>
         <div className={styles.specialty}>{doctorInfo.specialty}</div>
-        <div className={styles.education}>
-          {doctorInfo.education.map((item, index) => (
-            <div key={index}>{item}</div>
-          ))}
-        </div>
-        <div className={styles.membership}>
-          {doctorInfo.memberships.map((item, index) => (
-            <div key={index}>{item}</div>
-          ))}
+        <div className={styles.subInfos}>
+          <div className={styles.education}>
+            {doctorInfo.education.map((item, index) => (
+              <div key={index}>{item}</div>
+            ))}
+          </div>
+          <div className={styles.membership}>
+            {doctorInfo.memberships.map((item, index) => (
+              <div key={index}>{item}</div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
