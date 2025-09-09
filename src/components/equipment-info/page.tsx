@@ -1,11 +1,11 @@
 import { EquitmentBar } from './equitmentBar/EquipmentBar';
-import { MiniButton } from '../common/miniButton/MIniButton';
 import styles from './equipmentInfo.module.scss';
 import { useState } from 'react';
 import {
   EQUIPMENT_DATA,
   type EquipmentCategory,
 } from '../../data/equitment-info';
+import { MiniButton } from '../common/miniButton/MIniButton';
 
 export const EquipmentInfo = () => {
   const [selected, setSelected] = useState<EquipmentCategory>('hanbang');
