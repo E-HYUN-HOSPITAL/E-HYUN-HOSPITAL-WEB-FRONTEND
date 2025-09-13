@@ -3,73 +3,93 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 60px;
-  width: 100%;
-  height: 40rem;
-  background: #9f9f9f; //페이지 구분을 위한 임시 배경 색상
+  gap: 2rem;
   padding: 100px 80px;
+}
 
-  .map {
-    flex: 1;
-    width: 50%;
-    height: 500px;
-    background: #d9d9d9;
-    border-radius: 34px;
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.map {
+  flex: 0 0 60%;
+  width: 700px;
+  background: #d9d9d9;
+  border-radius: 20px;
+}
+
+.infoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  color: #333;
+}
+
+.title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #70605a;
+}
+
+.address,
+.tel {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+}
+
+.hours {
+  margin-top: 1rem;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
   }
 
-  .title {
-    flex: 1;
+  ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0.5rem;
 
-    h2 {
-      font-size: 28px;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .location {
+    li {
+      display: flex;
+      gap: 2rem;
       font-size: 18px;
-      line-height: 1.6;
-      color: #555;
+
+      span:first-child {
+        min-width: 120px;
+        font-weight: 500;
+      }
     }
   }
+}
 
-  .operation {
-    margin-top: 30px;
+.parking {
+  margin-top: 30px;
 
-    h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .operationInfo {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #444;
-    }
-
-    .alert {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #b33;
-    }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
   }
 
-  .park {
-    margin-top: 30px;
+  p {
+    font-size: 18px;
+  }
 
-    h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .parkInfo {
-      font-size: 16px;
-      color: #444;
-    }
+  .notice {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #70605a;
   }
 }
