@@ -32,7 +32,7 @@ export const Footer = () => {
         <div className={styles.otherInfo}>
           대표 : 이연진 | 사업자등록증 : 686-26-02248
         </div>
-        <div className={styles.otherInfo}>T. 054-</div>
+        <div className={styles.otherInfo}>T. 054-471-2000</div>
       </div>
     </div>
   );
