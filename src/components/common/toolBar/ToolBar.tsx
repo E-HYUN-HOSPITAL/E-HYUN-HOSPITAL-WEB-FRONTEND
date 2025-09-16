@@ -6,7 +6,7 @@ import styles from './toolBar.module.scss';
 export const ToolBar = () => {
   return (
     <div className={styles.container}>
-      <GoKakaoBtn onClick={() => console.log('카카오톡 상담 연결')} />
+      <GoKakaoBtn onClick={() => alert('카카오톡 상담은 준비 중이에요!')} />
       <EtcInfoBox />
       <GoTopScreenBtn />
     </div>
