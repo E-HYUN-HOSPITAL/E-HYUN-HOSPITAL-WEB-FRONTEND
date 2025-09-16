@@ -34,7 +34,7 @@ function MainPage() {
       <DoctorInfoPage ref={doctorRef} />
       <EquipmentInfo ref={equipmentRef} />
       <HospitalPicturePage ref={hospitalRef} />
-      <RouteToComePage />
+      <RouteToComePage ref={routeRef} />
       <Footer />
     </div>
   );
