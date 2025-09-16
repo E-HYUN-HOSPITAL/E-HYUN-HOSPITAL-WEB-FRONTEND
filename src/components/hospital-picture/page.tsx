@@ -33,7 +33,7 @@ const Images: string[] = [
 ];
 
 export const HospitalPicturePage = forwardRef<HTMLDivElement, object>(
-  (props, ref) => {
+  (_, ref) => {
     const settings = {
       arrows: false,
       dots: false,
