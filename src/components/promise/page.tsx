@@ -6,7 +6,7 @@ export const PromisePage = () => {
     <div className={styles.container}>
       <div className={styles.textBox}>
         <img
-          src='public/promise/hospital_name.svg'
+          src='/promise/hospital_name.svg'
           alt='타이틀 이미지'
           className={styles.titleImg}
         />

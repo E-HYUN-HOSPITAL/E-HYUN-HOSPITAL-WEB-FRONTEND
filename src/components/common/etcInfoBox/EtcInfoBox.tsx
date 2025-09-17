@@ -5,15 +5,15 @@ export const EtcInfoBox = () => {
   return (
     <div className={styles.container}>
       <ImageBtn
-        url='public/blog_icon.svg'
+        url='/blog_icon.svg'
         onClick={() => alert('블로그는 준비 중이에요!')}
       />
       <ImageBtn
-        url='public/map_icon.svg'
+        url='/map_icon.svg'
         onClick={() => window.open('https://naver.me/IFGouG2f', '_blank')}
       />
       <ImageBtn
-        url='public/insta_icon.svg'
+        url='/insta_icon.svg'
         onClick={() =>
           window.open(
             'https://www.instagram.com/e_hyun_hospital/?utm_source=ig_web_button_share_sheet',
