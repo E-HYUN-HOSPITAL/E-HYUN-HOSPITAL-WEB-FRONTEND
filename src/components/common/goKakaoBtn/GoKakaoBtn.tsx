@@ -7,7 +7,7 @@ type Props = {
 export const GoKakaoBtn = ({ onClick }: Props) => {
   return (
     <div className={styles.container} onClick={onClick}>
-      <img src='public/kakao_icon.svg' alt='카카오 아이콘' />
+      <img src='/kakao_icon.svg' alt='카카오 아이콘' />
     </div>
   );
 };

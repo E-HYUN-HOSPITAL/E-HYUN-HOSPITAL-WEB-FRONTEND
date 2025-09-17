@@ -9,10 +9,10 @@ import { ToolBar } from '../common/toolBar/ToolBar';
 import styles from './mainPage.module.scss';
 
 const Images: string[] = [
-  'public/로비 (3).png',
-  'public/피부치료센터 (6).png',
-  'public/복도.png',
-  'public/2인실 2,3-2.png',
+  '/로비 (3).png',
+  '/피부치료센터 (6).png',
+  '/복도.png',
+  '/2인실 2,3-2.png',
 ];
 
 export const MainPageComponent = () => {
@@ -56,23 +56,23 @@ export const MainPageComponent = () => {
         <div className={styles.subText}>이로움을 선사하는 공간</div>
         <img
           className={styles.mainTitle}
-          src='public/title_text.svg'
+          src='/title_text.svg'
           alt='제목 이미지'
         />
         <img
           className={styles.engSubTitle}
-          src='public/eng_title.svg'
+          src='/eng_title.svg'
           alt='영문 제목 이미지'
         />
       </div>
       <img
-        src='public/left_arrow.svg'
+        src='/left_arrow.svg'
         alt='왼쪽 화살표'
         className={styles.leftBtn}
         onClick={goToPrev}
       />
       <img
-        src='public/right_arrow.svg'
+        src='/right_arrow.svg'
         alt='오른쪽 화살표'
         className={styles.rightBtn}
         onClick={goToNext}

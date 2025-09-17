@@ -10,11 +10,7 @@ export const GoTopScreenBtn = () => {
 
   return (
     <div className={styles.container}>
-      <img
-        src='public/go_top_btn.svg'
-        alt='위로가기'
-        onClick={handleScrollToTop}
-      />
+      <img src='/go_top_btn.svg' alt='위로가기' onClick={handleScrollToTop} />
     </div>
   );
 };
