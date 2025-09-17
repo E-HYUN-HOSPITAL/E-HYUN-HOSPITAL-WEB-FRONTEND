@@ -27,7 +27,7 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
   },
   김김김: {
     major: 'Dermatology',
-    imageUrl: '/doctor-info/dummy_doc.png',
+    imageUrl: '/doctor-info/Doctor-Example.webp',
     position: '부원장',
     specialty: '피부과 전문의',
     education: [
