@@ -12,11 +12,11 @@ import { RouteToComePage } from '../../components/route-to-come/page';
 import styles from './mainpage.module.scss';
 
 function MainPage() {
-  const introduceRef = useRef(null);
-  const doctorRef = useRef(null);
-  const equipmentRef = useRef(null);
-  const hospitalRef = useRef(null);
-  const routeRef = useRef(null);
+  const introduceRef = useRef<HTMLDivElement>(null);
+  const doctorRef = useRef<HTMLDivElement>(null);
+  const equipmentRef = useRef<HTMLDivElement>(null);
+  const hospitalRef = useRef<HTMLDivElement>(null);
+  const routeRef = useRef<HTMLDivElement>(null);
 
   const [activeSection, setActiveSection] = useState<string>('introduce');
 
@@ -30,7 +30,8 @@ function MainPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight * 0.5;
+      const HEADER_HEIGHT = 8 * 16;
+      const scrollPosition = window.scrollY + HEADER_HEIGHT;
 
       const sections = Object.entries(sectionRefs);
 
@@ -50,9 +51,24 @@ function MainPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleScroll = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (ref.current) {
+      const HEADER_HEIGHT = 8 * 16;
+      const offset = ref.current.offsetTop - HEADER_HEIGHT;
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className={styles.container}>
-      <Header sectionRefs={sectionRefs} activeSection={activeSection} />
+      <Header
+        sectionRefs={sectionRefs}
+        activeSection={activeSection}
+        handleScroll={handleScroll}
+      />
       <MainPageComponent />
       <IntroducePage ref={introduceRef} />
       <PromisePage />

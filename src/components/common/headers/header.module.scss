@@ -34,7 +34,8 @@
 
     .active {
       width: 5rem;
-      border-bottom: 4px solid #70605a;
+      font-weight: 700;
+      border-bottom: 3px solid #70605a;
       padding: 1rem;
       transition: border-bottom-color 0.5s ease-in-out;
     }
