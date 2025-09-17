@@ -19,44 +19,46 @@ export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
 
   return (
     <div className={styles.container} ref={ref}>
-      <div className={styles.titleText}>Our Products</div>
-      <div className={styles.buttonBox}>
-        <MiniButton
-          text='한방'
-          selected={selected === 'hanbang'}
-          onClick={() => setSelected('hanbang')}
-        />
-        <MiniButton
-          text='양방'
-          selected={selected === 'yangbang'}
-          onClick={() => setSelected('yangbang')}
-        />
-        <MiniButton
-          text='피부과'
-          selected={selected === 'skincare'}
-          onClick={() => setSelected('skincare')}
-        />
-      </div>
-
-      <div className={styles.equipmentInfo}>
-        <div className={styles.equipmentBoxes}>
-          {currentEquipmentList.map((equipment) => (
-            <EquitmentBar
-              key={equipment.number}
-              number={equipment.number}
-              equipmentName={equipment.name}
-              selected={selectedEquipment === equipment.number}
-              onClick={() => setSelectedEquipment(equipment.number)}
-            />
-          ))}
-        </div>
-        {currentEquipment && (
-          <img
-            src={currentEquipment.image}
-            alt={currentEquipment.name}
-            className={styles.equipmentImage}
+      <div className={styles.content}>
+        <div className={styles.titleText}>Our Products</div>
+        <div className={styles.buttonBox}>
+          <MiniButton
+            text='한방'
+            selected={selected === 'hanbang'}
+            onClick={() => setSelected('hanbang')}
           />
-        )}
+          <MiniButton
+            text='양방'
+            selected={selected === 'yangbang'}
+            onClick={() => setSelected('yangbang')}
+          />
+          <MiniButton
+            text='피부과'
+            selected={selected === 'skincare'}
+            onClick={() => setSelected('skincare')}
+          />
+        </div>
+
+        <div className={styles.equipmentInfo}>
+          <div className={styles.equipmentBoxes}>
+            {currentEquipmentList.map((equipment) => (
+              <EquitmentBar
+                key={equipment.number}
+                number={equipment.number}
+                equipmentName={equipment.name}
+                selected={selectedEquipment === equipment.number}
+                onClick={() => setSelectedEquipment(equipment.number)}
+              />
+            ))}
+          </div>
+          {currentEquipment && (
+            <img
+              src={currentEquipment.image}
+              alt={currentEquipment.name}
+              className={styles.equipmentImage}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
