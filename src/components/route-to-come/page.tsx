@@ -1,11 +1,12 @@
-import { ToolBar } from "../common/toolBar/ToolBar";
-import styles from "./routeToCome.module.scss";
-import { useEffect } from "react";
+import { forwardRef, useEffect } from 'react';
 
-export const RouteToComePage = () => {
+import { ToolBar } from '../common/toolBar/ToolBar';
+import styles from './routeToCome.module.scss';
+
+export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
   useEffect(() => {
     if (window.kakao && window.kakao.maps) {
-      const container = document.getElementById("map");
+      const container = document.getElementById('map');
 
       if (!container) return;
 
@@ -27,9 +28,9 @@ export const RouteToComePage = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={ref}>
       <div className={styles.content}>
-        <div id="map" className={styles.map}></div>
+        <div id='map' className={styles.map}></div>
 
         <div className={styles.infoContainer}>
           <h2 className={styles.title}>Location</h2>
@@ -68,4 +69,4 @@ export const RouteToComePage = () => {
       <ToolBar />
     </div>
   );
-};
+});

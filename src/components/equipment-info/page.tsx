@@ -7,19 +7,19 @@ import {
 } from '../../data/equitment-info';
 import { MiniButton } from '../common/miniButton/MIniButton';
 
-export const EquipmentInfo = forwardRef<HTMLDivElement, object>(
-  (props, ref) => {
-    const [selected, setSelected] = useState<EquipmentCategory>('hanbang');
-    const [selectedEquipment, setSelectedEquipment] = useState<number>(1);
+export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
+  const [selected, setSelected] = useState<EquipmentCategory>('hanbang');
+  const [selectedEquipment, setSelectedEquipment] = useState<number>(1);
 
-    const currentEquipmentList = EQUIPMENT_DATA[selected];
+  const currentEquipmentList = EQUIPMENT_DATA[selected];
 
-    const currentEquipment = currentEquipmentList.find(
-      (item) => item.number === selectedEquipment
-    );
+  const currentEquipment = currentEquipmentList.find(
+    (item) => item.number === selectedEquipment
+  );
 
-    return (
-      <div className={styles.container} ref={ref}>
+  return (
+    <div className={styles.container} ref={ref}>
+      <div className={styles.content}>
         <div className={styles.titleText}>Our Products</div>
         <div className={styles.buttonBox}>
           <MiniButton
@@ -60,6 +60,6 @@ export const EquipmentInfo = forwardRef<HTMLDivElement, object>(
           )}
         </div>
       </div>
-    );
-  }
-);
+    </div>
+  );
+});

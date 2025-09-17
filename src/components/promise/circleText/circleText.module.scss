@@ -24,11 +24,18 @@
     margin-bottom: 3rem;
   }
 
-  .description {
-    width: 80%;
-    font-size: 1em;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
+  .descriptionBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+
+    .description {
+      font-size: 1em;
+      font-weight: 400;
+      color: #fff;
+    }
   }
 }
