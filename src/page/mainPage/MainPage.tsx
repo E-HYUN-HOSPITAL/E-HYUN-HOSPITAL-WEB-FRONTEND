@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react';
+
 import { DoctorInfoPage } from '../../components/doctor-info/page';
 import { EquipmentInfo } from '../../components/equipment-info/page';
 import { Footer } from '../../components/footer/Footer';
@@ -8,7 +10,6 @@ import { MainPageComponent } from '../../components/main/page';
 import { PromisePage } from '../../components/promise/page';
 import { RouteToComePage } from '../../components/route-to-come/page';
 import styles from './mainpage.module.scss';
-import { useRef } from 'react';
 
 function MainPage() {
   const introduceRef = useRef(null);
@@ -16,6 +17,8 @@ function MainPage() {
   const equipmentRef = useRef(null);
   const hospitalRef = useRef(null);
   const routeRef = useRef(null);
+
+  const [activeSection, setActiveSection] = useState<string>('introduce');
 
   const sectionRefs = {
     introduce: introduceRef,
@@ -25,9 +28,31 @@ function MainPage() {
     route: routeRef,
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight * 0.5;
+
+      const sections = Object.entries(sectionRefs);
+
+      for (const [key, ref] of sections) {
+        if (
+          ref.current &&
+          ref.current.offsetTop <= scrollPosition &&
+          ref.current.offsetTop + ref.current.offsetHeight > scrollPosition
+        ) {
+          setActiveSection(key);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className={styles.container}>
-      <Header sectionRefs={sectionRefs} />
+      <Header sectionRefs={sectionRefs} activeSection={activeSection} />
       <MainPageComponent />
       <IntroducePage ref={introduceRef} />
       <PromisePage />
