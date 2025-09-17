@@ -6,15 +6,20 @@ export const EtcInfoBox = () => {
     <div className={styles.container}>
       <ImageBtn
         url='public/blog_icon.svg'
-        onClick={() => console.log('블로그 연결')}
+        onClick={() => alert('블로그는 준비 중이에요!')}
       />
       <ImageBtn
         url='public/map_icon.svg'
-        onClick={() => console.log('지도 연결')}
+        onClick={() => window.open('https://naver.me/IFGouG2f', '_blank')}
       />
       <ImageBtn
         url='public/insta_icon.svg'
-        onClick={() => console.log('인스타그램 연결')}
+        onClick={() =>
+          window.open(
+            'https://www.instagram.com/e_hyun_hospital/?utm_source=ig_web_button_share_sheet',
+            '_blank'
+          )
+        }
       />
     </div>
   );

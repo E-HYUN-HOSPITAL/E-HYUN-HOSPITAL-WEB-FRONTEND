@@ -1,1 +1,53 @@
 // promise.module.scss
+.container {
+  width: 100%;
+  height: 45rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('public/promise/gradation_background_img.png');
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+
+    .titleImg {
+      width: 12rem;
+    }
+
+    .underline {
+      margin: 0.8rem;
+      width: 2rem;
+      height: 0;
+      border-bottom: 3px solid black;
+    }
+
+    .boldText {
+      font-size: 1.8em;
+      font-weight: 500;
+    }
+
+    .subText {
+      font-weight: 200;
+      font-size: 1.2em;
+    }
+  }
+
+  .circleBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}

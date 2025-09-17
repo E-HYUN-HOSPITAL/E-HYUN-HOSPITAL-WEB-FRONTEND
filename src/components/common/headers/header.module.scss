@@ -1,12 +1,20 @@
 .container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
   height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
   .logo {
     -webkit-user-drag: none;
+    padding: 0 3rem;
   }
 
   .tabBox {
@@ -17,8 +25,19 @@
     align-items: center;
 
     .link {
+      width: 5rem;
+      text-align: center;
       text-decoration: none;
       color: #70605a;
+      padding: 1rem;
+    }
+
+    .active {
+      width: 5rem;
+      font-weight: 700;
+      border-bottom: 3px solid #70605a;
+      padding: 1rem;
+      transition: border-bottom-color 0.5s ease-in-out;
     }
   }
 }

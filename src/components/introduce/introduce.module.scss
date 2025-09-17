@@ -1,1 +1,59 @@
 // introduce.module.scss
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 55rem;
+  background: #fff;
+
+  .intro {
+    padding: 4rem 2rem;
+
+    .subtitle {
+      font-weight: 700;
+      font-size: 24px;
+      color: #70605a;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 1.5rem;
+      color: #000;
+    }
+
+    .desc,
+    .subdesc {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #787878;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0;
+
+    .imageCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      img {
+        width: 500px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      span {
+        font-size: 14px;
+        color: #787878;
+      }
+    }
+  }
+}
