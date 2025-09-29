@@ -28,7 +28,7 @@ export const IntroducePage = forwardRef<HTMLDivElement, object>((_, ref) => {
           <span>물리치료실</span>
         </div>
       </div>
-      <ToolBar />;
+      <ToolBar />
     </div>
   );
 });
