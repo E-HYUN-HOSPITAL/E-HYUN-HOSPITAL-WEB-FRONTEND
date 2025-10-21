@@ -10,46 +10,66 @@ export const EQUIPMENT_DATA: Record<EquipmentCategory, EquipmentItem[]> = {
   hanbang: [
     {
       number: 1,
-      name: "한방장비 1",
-      image: "/equipments/dummy_equipment.png",
+      name: "LowFrequency",
+      image: "/equipments/oriental_medicine/기간섭형저주파극기.webp",
     },
-    { number: 2, name: "한방장비 2", image: "/equipments/dummy_equipment.png" },
-    { number: 3, name: "한방장비 3", image: "/equipments/dummy_equipment.png" },
+    {
+      number: 2,
+      name: "Infrared",
+      image: "/equipments/oriental_medicine/적외선조사기.webp",
+    },
+    {
+      number: 3,
+      name: "Acupunture",
+      image: "/equipments/oriental_medicine/침전기자극기STN-220.webp",
+    },
     { number: 4, name: "한방장비 4", image: "/equipments/dummy_equipment.png" },
     { number: 5, name: "한방장비 5", image: "/equipments/dummy_equipment.png" },
   ],
   yangbang: [
-    { number: 1, name: "양방장비 1", image: "/equipments/dummy_equipment.png" },
-    { number: 2, name: "양방장비 2", image: "/equipments/dummy_equipment.png" },
-    { number: 3, name: "양방장비 3", image: "/equipments/dummy_equipment.png" },
-    { number: 4, name: "양방장비 4", image: "/equipments/dummy_equipment.png" },
+    {
+      number: 1,
+      name: "C-arm",
+      image: "/equipments/western_medicine/c-arm.webp",
+    },
+    { number: 2, name: "Xr", image: "/equipments/western_medicine/xr.webp" },
+    {
+      number: 3,
+      name: "ExtracorporealShockWaves",
+      image: "/equipments/western_medicine/체외충격파치료기.webp",
+    },
+    {
+      number: 4,
+      name: "RaphaelSaso",
+      image: "/equipments/western_medicine/터보싸소_다이얼.webp",
+    },
     { number: 5, name: "양방장비 5", image: "/equipments/dummy_equipment.png" },
   ],
   skincare: [
     {
       number: 1,
       name: "Care5",
-      image: "/equipments/care5.webp",
+      image: "/equipments/dermatology/care5.webp",
     },
     {
       number: 2,
       name: "Clarity2",
-      image: "/equipments/clarity2.webp",
+      image: "/equipments/dermatology/clarity2.webp",
     },
     {
       number: 3,
-      name: "LDM",
-      image: "/equipments/LDM.webp",
+      name: "Shurink Universe",
+      image: "/equipments/dermatology/shrink_universe.webp",
     },
     {
       number: 4,
-      name: "picoPlus",
-      image: "/equipments/picoPlus.webp",
+      name: "PicoPlus",
+      image: "/equipments/dermatology/picoPlus.webp",
     },
     {
       number: 5,
       name: "Oligio",
-      image: "/equipments/올리지오.webp",
+      image: "/equipments/dermatology/올리지오.webp",
     },
   ],
 };

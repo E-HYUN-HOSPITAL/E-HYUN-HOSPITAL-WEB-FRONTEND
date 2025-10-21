@@ -1,11 +1,11 @@
-import { ImageBtn } from '../common/imageBtn/ImageBtn';
-import styles from './footer.module.scss';
+import { ImageBtn } from "../common/imageBtn/ImageBtn";
+import styles from "./footer.module.scss";
 
 export const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.iconBar}>
-        <img src='/header_logo.svg' alt='로고' />
+        <img src="/header_logo.svg" alt="로고" />
       </div>
       <div className={styles.underline}></div>
       <div className={styles.infoBox}>
@@ -13,19 +13,19 @@ export const Footer = () => {
           <div className={styles.hospitalName}>이현한방병원</div>
           <div className={styles.icons}>
             <ImageBtn
-              url='/blog_icon.svg'
-              onClick={() => alert('블로그는 준비 중이에요!')}
+              url="/blog_icon.svg"
+              onClick={() => alert("블로그는 준비 중이에요!")}
             />
             <ImageBtn
-              url='/map_icon.svg'
-              onClick={() => window.open('https://naver.me/IFGouG2f', '_blank')}
+              url="/map_icon.svg"
+              onClick={() => window.open("https://naver.me/IFGouG2f", "_blank")}
             />
             <ImageBtn
-              url='/insta_icon.svg'
+              url="/insta_icon.svg"
               onClick={() =>
                 window.open(
-                  'https://www.instagram.com/e_hyun_hospital/?utm_source=ig_web_button_share_sheet',
-                  '_blank'
+                  "https://www.instagram.com/e_hyun_hospital/?utm_source=ig_web_button_share_sheet",
+                  "_blank"
                 )
               }
             />
