@@ -32,6 +32,7 @@
     "slick-carousel": "^1.8.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vite-plugin-sitemap": "0.8.2"
   }
 }
