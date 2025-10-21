@@ -31,6 +31,7 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
     imageUrl: "/doctor-info/dummy_doc.png",
     position: "대표원장",
     specialty: "한의사",
+
     education: [
       "미국진단초음파협회(ARDMS)",
       "국제근골격계초음파 진단 자격자(RMSK)",

@@ -9,10 +9,10 @@ import { ToolBar } from '../common/toolBar/ToolBar';
 import styles from './mainPage.module.scss';
 
 const Images: string[] = [
-  '/로비 (3).png',
-  '/피부치료센터 (6).png',
-  '/복도.png',
-  '/2인실 2,3-2.png',
+  '/Lobby-(3).webp',
+  '/Skin-Treatment-Center-(6).webp',
+  '/Hallway.webp',
+  '/Two-Person-Room-2-3-2.webp',
 ];
 
 export const MainPageComponent = () => {
