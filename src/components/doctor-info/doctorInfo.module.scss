@@ -18,7 +18,7 @@
       font-size: 2em;
       font-weight: 700;
       color: #70605a;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
     }
 
     .koTitle {
@@ -45,7 +45,7 @@
   .comment {
     width: 100%;
     height: 10rem;
-    background-image: url('/doctor-info/doctor_info_bg.svg');
+    background-image: url("/doctor-info/doctor_info_bg.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,7 +54,60 @@
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    font-family: 'MaruBuriOTF', serif;
+    font-family: "MaruBuriOTF", serif;
     font-weight: 700;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-top: 2rem;
+
+    .topBox {
+      .engTitle {
+        font-size: 1.6em;
+      }
+
+      .koTitle {
+        font-size: 1.4em;
+      }
+    }
+
+    .doctorInfos {
+      gap: 2rem;
+    }
+
+    .comment {
+      font-size: 1.6em;
+      height: 8rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 1.5rem;
+
+    .topBox {
+      gap: 0.6rem;
+      .engTitle {
+        font-size: 1.4em;
+      }
+
+      .koTitle {
+        font-size: 1.2em;
+      }
+    }
+
+    .doctorInfos {
+      gap: 1.5rem;
+    }
+
+    .comment {
+      font-size: 1.2em;
+      height: 6rem;
+      text-align: center;
+      padding: 0 1rem;
+    }
   }
 }
