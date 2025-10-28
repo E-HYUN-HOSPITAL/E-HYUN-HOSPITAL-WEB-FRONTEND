@@ -23,8 +23,16 @@ export const EQUIPMENT_DATA: Record<EquipmentCategory, EquipmentItem[]> = {
       name: "Acupunture",
       image: "/equipments/oriental_medicine/침전기자극기STN-220.webp",
     },
-    { number: 4, name: "한방장비 4", image: "/equipments/dummy_equipment.png" },
-    { number: 5, name: "한방장비 5", image: "/equipments/dummy_equipment.png" },
+    {
+      number: 4,
+      name: "Ultrasound",
+      image: "/equipments/oriental_medicine/초음파치료기.webp",
+    },
+    {
+      number: 5,
+      name: "Heated",
+      image: "/equipments/oriental_medicine/온뜸.webp",
+    },
   ],
   yangbang: [
     {
@@ -43,7 +51,11 @@ export const EQUIPMENT_DATA: Record<EquipmentCategory, EquipmentItem[]> = {
       name: "RaphaelSaso",
       image: "/equipments/western_medicine/터보싸소_다이얼.webp",
     },
-    { number: 5, name: "양방장비 5", image: "/equipments/dummy_equipment.png" },
+    {
+      number: 5,
+      name: "CPM",
+      image: "/equipments/western_medicine/KneeCPM_1.webp",
+    },
   ],
   skincare: [
     {
