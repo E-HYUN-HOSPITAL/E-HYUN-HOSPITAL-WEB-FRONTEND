@@ -1,22 +1,22 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-import { Image } from '../common/image/Image';
-import Slider from 'react-slick';
-import { ToolBar } from '../common/toolBar/ToolBar';
-import styles from './mainPage.module.scss';
+import { Image } from "../common/image/Image";
+import Slider from "react-slick";
+import { ToolBar } from "../common/toolBar/ToolBar";
+import styles from "./mainPage.module.scss";
 
 const Images: string[] = [
-  '/Lobby-(3).webp',
-  '/Skin-Treatment-Center-(6).webp',
-  '/Hallway.webp',
-  '/Two-Person-Room-2-3-2.webp',
+  "/hospital-interior/Lobby-(3).webp",
+  "/hospital-interior/Skin-Treatment-Center-(6).webp",
+  "/hospital-interior/Hallway.webp",
+  "/hospital-interior/Two-Person-Room-2-3-2.webp",
 ];
 
 export const MainPageComponent = () => {
-  const [choose, setChoose] = useState<string>('');
+  const [choose, setChoose] = useState<string>("");
   const sliderRef = useRef<Slider>(null);
 
   useEffect(() => console.log(choose), []);
@@ -49,31 +49,31 @@ export const MainPageComponent = () => {
     <div className={styles.container}>
       <Slider ref={sliderRef} {...settings}>
         {Images.map((image, index) => (
-          <Image key={index} source={image} alt='' />
+          <Image key={index} source={image} alt="" />
         ))}
       </Slider>
       <div className={styles.titleBox}>
         <div className={styles.subText}>이로움을 선사하는 공간</div>
         <img
           className={styles.mainTitle}
-          src='/title_text.svg'
-          alt='제목 이미지'
+          src="/title_text.svg"
+          alt="제목 이미지"
         />
         <img
           className={styles.engSubTitle}
-          src='/eng_title.svg'
-          alt='영문 제목 이미지'
+          src="/eng_title.svg"
+          alt="영문 제목 이미지"
         />
       </div>
       <img
-        src='/left_arrow.svg'
-        alt='왼쪽 화살표'
+        src="/left_arrow.svg"
+        alt="왼쪽 화살표"
         className={styles.leftBtn}
         onClick={goToPrev}
       />
       <img
-        src='/right_arrow.svg'
-        alt='오른쪽 화살표'
+        src="/right_arrow.svg"
+        alt="오른쪽 화살표"
         className={styles.rightBtn}
         onClick={goToNext}
       />

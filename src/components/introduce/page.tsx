@@ -1,6 +1,6 @@
-import { ToolBar } from '../common/toolBar/ToolBar';
-import { forwardRef } from 'react';
-import styles from './introduce.module.scss';
+import { ToolBar } from "../common/toolBar/ToolBar";
+import { forwardRef } from "react";
+import styles from "./introduce.module.scss";
 
 export const IntroducePage = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
@@ -20,11 +20,17 @@ export const IntroducePage = forwardRef<HTMLDivElement, object>((_, ref) => {
       </div>
       <div className={styles.images}>
         <div className={styles.imageCard}>
-          <img src='/Exercise-Therapy-Room.webp' alt='운동치료실' />
+          <img
+            src="/hospital-interior/Exercise-Therapy-Room.webp"
+            alt="운동치료실"
+          />
           <span>운동치료실</span>
         </div>
         <div className={styles.imageCard}>
-          <img src='/Physical-Therapy-Room.webp' alt='물리치료실' />
+          <img
+            src="/hospital-interior/Physical-Therapy-Room.webp"
+            alt="물리치료실"
+          />
           <span>물리치료실</span>
         </div>
       </div>
