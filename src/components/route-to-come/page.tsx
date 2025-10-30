@@ -1,12 +1,12 @@
-import { forwardRef, useEffect } from 'react';
+import { forwardRef, useEffect } from "react";
 
-import { ToolBar } from '../common/toolBar/ToolBar';
-import styles from './routeToCome.module.scss';
+import { ToolBar } from "../common/toolBar/ToolBar";
+import styles from "./routeToCome.module.scss";
 
 export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
   useEffect(() => {
     if (window.kakao && window.kakao.maps) {
-      const container = document.getElementById('map');
+      const container = document.getElementById("map");
 
       if (!container) return;
 
@@ -30,7 +30,7 @@ export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.content}>
-        <div id='map' className={styles.map}></div>
+        <div id="map" className={styles.map}></div>
 
         <div className={styles.infoContainer}>
           <h2 className={styles.title}>Location</h2>
@@ -60,10 +60,13 @@ export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
           <div className={styles.parking}>
             <h3>주차장</h3>
             <p> 경상북도 구미시 산동읍 1426, 가람주차장</p>
-            <p className={styles.notice}>
+            {/* <p className={styles.notice}>
               *입원환자 당일무료/외래환자 최대 2시간 지원가능
-            </p>
+            </p> */}
           </div>
+          <p className={styles.notice}>
+            *입원환자 당일무료/외래환자 최대 2시간 지원가능
+          </p>
         </div>
       </div>
       <ToolBar />
