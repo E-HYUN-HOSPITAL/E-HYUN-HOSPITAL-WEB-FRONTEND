@@ -1,42 +1,52 @@
-import Slider from 'react-slick';
-import { forwardRef } from 'react';
-import styles from './hospitalPicture.module.scss';
+import Slider from "react-slick";
+import { forwardRef } from "react";
+import styles from "./hospitalPicture.module.scss";
 
 const Images: string[] = [
-  '/hospital-interior/Two-Person-Room-2-3-2.webp',
-  '/hospital-interior/7th-Floor-(1).webp',
-  '/hospital-interior/7th-Floor-(2).webp',
-  '/hospital-interior/7th-Floor-(3).webp',
-  '/hospital-interior/7th-Floor-(4).webp',
-  '/hospital-interior/Lobby-(1).webp',
-  '/hospital-interior/Lobby-(2).webp',
-  '/hospital-interior/Lobby-(3).webp',
-  '/hospital-interior/Lobby-(4).webp',
-  '/hospital-interior/Lobby-(5).webp',
-  '/hospital-interior/Physical-Therapy-Room.webp',
-  '/hospital-interior/Hallway.webp',
-  '/hospital-interior/Consultation-Room-(1).webp',
-  '/hospital-interior/Consultation-Room-(2).webp',
-  '/hospital-interior/Consultation-Room-(3).webp',
-  '/hospital-interior/Service-Table.webp',
-  '/hospital-interior/Exercise-Therapy-Room.webp',
-  '/hospital-interior/Powder-Room-(1).webp',
-  '/hospital-interior/Powder-Room-(2).webp',
-  '/hospital-interior/Powder-Room-(3).webp',
-  '/hospital-interior/Powder-Room-(4).webp',
-  '/hospital-interior/Skin-Treatment-Center-(1).webp',
-  '/hospital-interior/Skin-Treatment-Center-(2).webp',
-  '/hospital-interior/Skin-Treatment-Center-(3).webp',
-  '/hospital-interior/Skin-Treatment-Center-(4).webp',
-  '/hospital-interior/Skin-Treatment-Center-(5).webp',
-  '/hospital-interior/Skin-Treatment-Center-(6).webp',
+  "/hospital-interior/Two-Person-Room-2-3-2.webp",
+  "/hospital-interior/7th-Floor-(1).webp",
+  "/hospital-interior/7th-Floor-(2).webp",
+  "/hospital-interior/7th-Floor-(3).webp",
+  "/hospital-interior/7th-Floor-(4).webp",
+  "/hospital-interior/Lobby-(1).webp",
+  "/hospital-interior/Lobby-(2).webp",
+  "/hospital-interior/Lobby-(3).webp",
+  "/hospital-interior/Lobby-(4).webp",
+  "/hospital-interior/Lobby-(5).webp",
+  "/hospital-interior/Physical-Therapy-Room.webp",
+  "/hospital-interior/Hallway.webp",
+  "/hospital-interior/Consultation-Room-(1).webp",
+  "/hospital-interior/Consultation-Room-(2).webp",
+  "/hospital-interior/Consultation-Room-(3).webp",
+  "/hospital-interior/Service-Table.webp",
+  "/hospital-interior/Exercise-Therapy-Room.webp",
+  "/hospital-interior/Powder-Room-(1).webp",
+  "/hospital-interior/Powder-Room-(2).webp",
+  "/hospital-interior/Powder-Room-(3).webp",
+  "/hospital-interior/Powder-Room-(4).webp",
+  "/hospital-interior/Skin-Treatment-Center-(1).webp",
+  "/hospital-interior/Skin-Treatment-Center-(2).webp",
+  "/hospital-interior/Skin-Treatment-Center-(3).webp",
+  "/hospital-interior/Skin-Treatment-Center-(4).webp",
+  "/hospital-interior/Skin-Treatment-Center-(5).webp",
+  "/hospital-interior/Skin-Treatment-Center-(6).webp",
 ];
 
 export const HospitalPicturePage = forwardRef<HTMLDivElement, object>(
   (_, ref) => {
     const settings = {
       arrows: false,
-      dots: false,
+      dots: true,
+      appendDots: (dots: React.ReactNode) => (
+        <div
+          style={{
+            position: "relative",
+            bottom: "-10px",
+          }}
+        >
+          <ul style={{ margin: "0px" }}>{dots}</ul>
+        </div>
+      ),
       infinite: true,
       speed: 500,
       slidesToShow: 1,
