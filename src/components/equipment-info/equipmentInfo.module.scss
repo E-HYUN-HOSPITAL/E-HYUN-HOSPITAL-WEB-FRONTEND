@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 2rem;
 
   .content {
     display: flex;
@@ -15,12 +16,13 @@
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
+    max-width: 1200px;
 
     .titleText {
       font-size: 2em;
       font-weight: 700;
       color: #70605a;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
     }
 
     .buttonBox {
@@ -47,6 +49,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 0.4rem;
+        flex: 1;
       }
     }
 
@@ -54,6 +57,59 @@
       height: 100%;
       width: auto;
       object-fit: cover;
+      flex: 1.5;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      padding: 1.5rem;
+    }
+
+    .content {
+      .titleText {
+        font-size: 1.8em;
+      }
+
+      .buttonBox {
+        flex-wrap: wrap;
+      }
+
+      .equipmentInfo {
+        gap: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .titleText {
+      font-size: 1.5em;
+    }
+
+    .buttonBox {
+      flex-wrap: wrap;
+    }
+
+    .equipmentInfo {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .equipmentBoxes {
+        height: auto;
+        width: 100%;
+      }
+
+      .equipmentImage {
+        height: auto;
+        width: 100%;
+        max-width: 450px;
+      }
     }
   }
 }
