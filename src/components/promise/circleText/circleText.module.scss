@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 
   .number {
     font-size: 2em;
@@ -36,6 +37,45 @@
       font-size: 1em;
       font-weight: 400;
       color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 18rem;
+    height: 18rem;
+
+    .number {
+      font-size: 1.8em;
+    }
+    .title {
+      font-size: 1.4em;
+    }
+    .descriptionBox {
+      .description {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 16rem;
+    height: 16rem;
+
+    .number {
+      font-size: 1.6em;
+    }
+    .title {
+      font-size: 1.3em;
+      margin-bottom: 1.5rem;
+    }
+    .descriptionBox {
+      .description {
+        font-size: 0.9em;
+      }
     }
   }
 }
