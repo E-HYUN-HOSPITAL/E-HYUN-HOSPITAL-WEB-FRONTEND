@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   .titleBox {
     width: 100%;
@@ -14,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 
     .subText {
       color: #fff;
@@ -32,11 +34,67 @@
     position: absolute;
     width: 2rem;
     left: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .rightBtn {
     position: absolute;
     width: 2rem;
     right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 1024px) {
+    .titleBox {
+      top: 15rem;
+
+      .subText {
+        font-size: 1.2em;
+      }
+      .mainTitle {
+        width: 70%;
+        max-width: 30rem;
+      }
+      .engSubTitle {
+        width: 50%;
+        max-width: 15rem;
+      }
+    }
+
+    .leftBtn {
+      left: 1.5rem;
+    }
+    .rightBtn {
+      right: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .titleBox {
+      top: 12rem;
+      padding: 0 1rem;
+
+      .subText {
+        font-size: 1em;
+        text-align: center;
+      }
+      .mainTitle {
+        width: 90%;
+      }
+      .engSubTitle {
+        width: 70%;
+      }
+    }
+
+    .leftBtn {
+      width: 1.5rem;
+      left: 1rem;
+    }
+    .rightBtn {
+      width: 1.5rem;
+      right: 1rem;
+    }
   }
 }

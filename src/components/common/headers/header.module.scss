@@ -41,3 +41,17 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    justify-content: space-between;
+
+    .logo {
+      padding: 0 1.5rem;
+    }
+
+    .tabBox {
+      display: none;
+    }
+  }
+}

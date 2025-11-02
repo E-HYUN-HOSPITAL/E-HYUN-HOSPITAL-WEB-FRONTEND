@@ -60,9 +60,6 @@ export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
           <div className={styles.parking}>
             <h3>주차장</h3>
             <p> 경상북도 구미시 산동읍 1426, 가람주차장</p>
-            {/* <p className={styles.notice}>
-              *입원환자 당일무료/외래환자 최대 2시간 지원가능
-            </p> */}
           </div>
           <p className={styles.notice}>
             *입원환자 당일무료/외래환자 최대 2시간 지원가능
