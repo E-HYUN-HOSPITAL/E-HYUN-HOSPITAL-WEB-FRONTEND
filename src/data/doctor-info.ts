@@ -55,7 +55,7 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
   },
   김철규: {
     major: "Surgical Specialist",
-    imageUrl: "public/e-hyun-logo.png",
+    imageUrl: "/doctor-info/Doctor-Example.webp",
     position: "외과전문의",
     specialty: "한의사",
     education: ["준비 중입니다"],
