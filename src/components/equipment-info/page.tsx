@@ -1,14 +1,14 @@
-import { EquitmentBar } from './equitmentBar/EquipmentBar';
-import styles from './equipmentInfo.module.scss';
-import { forwardRef, useState } from 'react';
+import { EquitmentBar } from "./equitmentBar/EquipmentBar";
+import styles from "./equipmentInfo.module.scss";
+import { forwardRef, useState } from "react";
 import {
   EQUIPMENT_DATA,
   type EquipmentCategory,
-} from '../../data/equitment-info';
-import { MiniButton } from '../common/miniButton/MIniButton';
+} from "../../data/equitment-info";
+import { MiniButton } from "../common/miniButton/MIniButton";
 
 export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
-  const [selected, setSelected] = useState<EquipmentCategory>('hanbang');
+  const [selected, setSelected] = useState<EquipmentCategory>("hanbang");
   const [selectedEquipment, setSelectedEquipment] = useState<number>(1);
 
   const currentEquipmentList = EQUIPMENT_DATA[selected];
@@ -20,22 +20,32 @@ export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.content}>
-        <div className={styles.titleText}>Our Products</div>
+        <div className={styles.titleText}>장비 및 시술리스트 소개</div>
         <div className={styles.buttonBox}>
           <MiniButton
-            text='한방'
-            selected={selected === 'hanbang'}
-            onClick={() => setSelected('hanbang')}
+            text="한방"
+            selected={selected === "hanbang"}
+            onClick={() => setSelected("hanbang")}
           />
           <MiniButton
-            text='양방'
-            selected={selected === 'yangbang'}
-            onClick={() => setSelected('yangbang')}
+            text="양방"
+            selected={selected === "yangbang"}
+            onClick={() => setSelected("yangbang")}
           />
           <MiniButton
-            text='피부과'
-            selected={selected === 'skincare'}
-            onClick={() => setSelected('skincare')}
+            text="피부과"
+            selected={selected === "skincare"}
+            onClick={() => setSelected("skincare")}
+          />
+          <MiniButton
+            text="시술리스트"
+            selected={selected === "medilist"}
+            onClick={() => setSelected("medilist")}
+          />
+          <MiniButton
+            text="비급여항목"
+            selected={selected === "non-covered"}
+            onClick={() => setSelected("non-covered")}
           />
         </div>
 

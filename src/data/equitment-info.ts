@@ -4,7 +4,12 @@ export interface EquipmentItem {
   image: string;
 }
 
-export type EquipmentCategory = "hanbang" | "yangbang" | "skincare";
+export type EquipmentCategory =
+  | "hanbang"
+  | "yangbang"
+  | "skincare"
+  | "medilist"
+  | "non-covered";
 
 export const EQUIPMENT_DATA: Record<EquipmentCategory, EquipmentItem[]> = {
   hanbang: [
@@ -82,6 +87,35 @@ export const EQUIPMENT_DATA: Record<EquipmentCategory, EquipmentItem[]> = {
       number: 5,
       name: "Oligio",
       image: "/equipments/dermatology/올리지오.webp",
+    },
+  ],
+  medilist: [
+    {
+      number: 1,
+      name: "제모",
+      image: "/equipments/medical_list/medi_list1.webp",
+    },
+    {
+      number: 2,
+      name: "색소 및 문신제거",
+      image: "/equipments/medical_list/medi_list2.webp",
+    },
+    {
+      number: 3,
+      name: "홍조/여드름/모공 및 리프팅",
+      image: "/equipments/medical_list/medi_list3.webp",
+    },
+    {
+      number: 4,
+      name: "피부관리",
+      image: "/equipments/medical_list/medi_list4.webp",
+    },
+  ],
+  "non-covered": [
+    {
+      number: 1,
+      name: "비급여항목",
+      image: "/equipments/non-covered/non_covered.webp",
     },
   ],
 };
