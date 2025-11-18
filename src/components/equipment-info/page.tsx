@@ -20,7 +20,7 @@ export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.content}>
-        <div className={styles.titleText}>장비 및 시술리스트 소개</div>
+        <div className={styles.titleText}>장비 소개</div>
         <div className={styles.buttonBox}>
           <MiniButton
             text="한방"
@@ -36,11 +36,6 @@ export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
             text="피부과"
             selected={selected === "skincare"}
             onClick={() => setSelected("skincare")}
-          />
-          <MiniButton
-            text="시술리스트"
-            selected={selected === "medilist"}
-            onClick={() => setSelected("medilist")}
           />
           <MiniButton
             text="비급여항목"
