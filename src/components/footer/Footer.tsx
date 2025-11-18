@@ -23,10 +23,7 @@ export const Footer = () => {
             <ImageBtn
               url="/insta_icon.svg"
               onClick={() =>
-                window.open(
-                  "https://www.instagram.com/e_hyun_hospital/?utm_source=ig_web_button_share_sheet",
-                  "_blank"
-                )
+                window.open("https://www.instagram.com/ehyun_gumi", "_blank")
               }
             />
           </div>
