@@ -21,6 +21,13 @@ const AcnePage = () => {
       <main style={{ minHeight: "80vh", padding: "2rem" }}>
         <h1>홍조/여드름/모공 관리센터</h1>
         <p>홍조/여드름/모공 안내 프로그램입니다.</p>
+        <div style={{ marginTop: "2rem", width: "100%", maxWidth: "800px" }}>
+          <img
+            src="/equipments/medical_list/medi_list3.webp"
+            alt="홍조/여드름/모공 시술 안내"
+            style={{ width: "100%", height: "auto", borderRadius: "10px" }} // 스타일은 취향껏 조절
+          />
+        </div>
       </main>
 
       <Footer />

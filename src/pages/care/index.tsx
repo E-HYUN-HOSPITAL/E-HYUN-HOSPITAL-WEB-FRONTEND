@@ -21,6 +21,13 @@ const CarePage = () => {
       <main style={{ minHeight: "80vh", padding: "2rem" }}>
         <h1>피부관리 센터</h1>
         <p>피부관리 안내 프로그램입니다.</p>
+        <div style={{ marginTop: "2rem", width: "100%", maxWidth: "800px" }}>
+          <img
+            src="/equipments/medical_list/medi_list4.webp"
+            alt="피부관리 프로그램 안내"
+            style={{ width: "100%", height: "auto", borderRadius: "10px" }} // 스타일은 취향껏 조절
+          />
+        </div>
       </main>
 
       <Footer />
