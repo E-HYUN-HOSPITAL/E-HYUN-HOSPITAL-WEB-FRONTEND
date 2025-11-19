@@ -19,6 +19,7 @@ export const HEADER_MENU: MainMenuItem[] = [
       { label: "의료진 소개", key: "doctor", type: "scroll" },
       { label: "장비안내", key: "equipment", type: "scroll" },
       { label: "병원내부 사진", key: "hospital", type: "scroll" },
+      { label: "비급여 항목 안내", key: "noncovered", type: "scroll" },
       { label: "오시는 길", key: "route", type: "scroll" },
     ],
   },
