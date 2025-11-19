@@ -37,11 +37,6 @@ export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
             selected={selected === "skincare"}
             onClick={() => setSelected("skincare")}
           />
-          <MiniButton
-            text="비급여항목"
-            selected={selected === "non-covered"}
-            onClick={() => setSelected("non-covered")}
-          />
         </div>
 
         <div className={styles.equipmentInfo}>

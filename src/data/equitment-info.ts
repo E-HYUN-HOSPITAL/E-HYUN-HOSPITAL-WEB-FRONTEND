@@ -4,11 +4,7 @@ export interface EquipmentItem {
   image: string;
 }
 
-export type EquipmentCategory =
-  | "hanbang"
-  | "yangbang"
-  | "skincare"
-  | "non-covered";
+export type EquipmentCategory = "hanbang" | "yangbang" | "skincare";
 
 export const EQUIPMENT_DATA: Record<EquipmentCategory, EquipmentItem[]> = {
   hanbang: [
@@ -86,13 +82,6 @@ export const EQUIPMENT_DATA: Record<EquipmentCategory, EquipmentItem[]> = {
       number: 5,
       name: "Oligio",
       image: "/equipments/dermatology/올리지오.webp",
-    },
-  ],
-  "non-covered": [
-    {
-      number: 1,
-      name: "비급여항목",
-      image: "/equipments/non-covered/non_covered.webp",
     },
   ],
 };
