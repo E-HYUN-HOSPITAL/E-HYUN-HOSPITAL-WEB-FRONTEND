@@ -51,8 +51,21 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
     imageUrl: "/doctor-info/clinic_director.webp",
     position: "진료원장",
     specialty: "한의사",
-    education: ["준비 중입니다"],
-    memberships: ["준비 중입니다"],
+    education: [
+      "미국진단초음파협회(ARDMS)",
+      "국제근골격계초음파 진단 자격자(RMSK)",
+      "대구스포츠한의학회 팀닥터 과정 수료",
+    ],
+    memberships: [
+      "대한한의학회 회원",
+      "대한스포츠한의학회 회원",
+      "한방비만학회 회원",
+      "전 경희더한의원 진료원장",
+      "전 동편부부한의원 진료원장",
+      "전 청라한방병원 진료원장",
+      "전 제일한의원 진료원장",
+      "전 제일한방병원 진료원장",
+    ],
   },
   김철규: {
     major: "Surgical Specialist",
