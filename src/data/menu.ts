@@ -27,8 +27,8 @@ export const HEADER_MENU: MainMenuItem[] = [
     label: "제모 센터",
     key: "hair_removal",
     children: [
-      { label: "남성 제모", key: "/hair-removal/men", type: "link" },
       { label: "여성 제모", key: "/hair-removal/women", type: "link" },
+      { label: "남성 제모", key: "/hair-removal/men", type: "link" },
     ],
   },
   {
