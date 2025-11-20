@@ -1,12 +1,21 @@
-import { EtcInfoBox } from '../etcInfoBox/EtcInfoBox';
-import { GoKakaoBtn } from '../goKakaoBtn/GoKakaoBtn';
-import { GoTopScreenBtn } from '../goTopScreenBtn/GoTopScreenBtn';
-import styles from './toolBar.module.scss';
+import { EtcInfoBox } from "../etcInfoBox/EtcInfoBox";
+import { GoKakaoBtn } from "../goKakaoBtn/GoKakaoBtn";
+import { GoTopScreenBtn } from "../goTopScreenBtn/GoTopScreenBtn";
+import styles from "./toolBar.module.scss";
 
-export const ToolBar = () => {
+type Props = {
+  onClick?: () => void;
+};
+
+export const ToolBar = ({ onClick }: Props) => {
   return (
     <div className={styles.container}>
-      <GoKakaoBtn onClick={() => alert('카카오톡 상담은 준비 중이에요!')} />
+      <GoKakaoBtn
+        onClick={
+          onClick ||
+          (() => window.open("https://pf.kakao.com/_hKrHn", "_blank"))
+        }
+      />
       <EtcInfoBox />
       <GoTopScreenBtn />
     </div>

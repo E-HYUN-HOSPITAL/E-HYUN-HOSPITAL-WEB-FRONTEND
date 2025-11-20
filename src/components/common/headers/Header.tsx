@@ -9,6 +9,7 @@ type Props = {
     doctor: React.RefObject<HTMLDivElement | null>;
     equipment: React.RefObject<HTMLDivElement | null>;
     hospital: React.RefObject<HTMLDivElement | null>;
+    noncovered: React.RefObject<HTMLDivElement | null>;
     route: React.RefObject<HTMLDivElement | null>;
   };
   activeSection: string;
