@@ -9,13 +9,15 @@
   margin-bottom: 4rem;
 
   img {
+    width: 20rem;
     height: 28rem;
     border-radius: 1rem;
     object-fit: cover;
   }
 
   .infos {
-    width: 20%;
+    flex: 1;
+    max-width: 600px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -51,6 +53,16 @@
         white-space: normal;
       }
     }
+
+    &:only-child {
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+
+      .subInfos {
+        align-items: center;
+      }
+    }
   }
 }
 
@@ -61,8 +73,8 @@
 
     .infos {
       width: 80%;
-      text-align: center;
-      align-items: center;
+      text-align: left;
+      align-items: flex-start;
       margin-bottom: 2rem;
     }
 
@@ -77,6 +89,7 @@
   .container {
     flex-direction: column;
     height: auto;
+    align-items: center;
 
     img {
       width: 80%;
@@ -85,8 +98,8 @@
 
     .infos {
       width: 90%;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
 
       .major,
       .name,
