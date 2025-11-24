@@ -1,10 +1,10 @@
 export interface DoctorType {
   major: string;
-  imageUrl: string;
+  imageUrl: string | null;
   position: string;
   specialty: string;
-  education: string[];
-  memberships: string[];
+  education: string[] | null;
+  memberships: string[] | null;
 }
 
 export const DOCTOR_DATA: { [key: string]: DoctorType } = {
@@ -67,12 +67,30 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
       "전 제일한방병원 진료원장",
     ],
   },
+  황미나: {
+    major: "Clinic Director",
+    imageUrl: null,
+    position: "진료원장",
+    specialty: "한의사",
+    education: [
+      "대구한의대 한의학과 졸업",
+      "전 부야한의원 진료원장",
+      "전 위더스요양병원 진료과장",
+      "전 임설혜한의원 진료원장",
+    ],
+    memberships: [
+      "대한한의학회 회원",
+      "대한한방비만학회 회원",
+      "대한한방소아과학회 회원",
+      "대한한방안이비인후피부과학회 회원",
+    ],
+  },
   김철규: {
     major: "Surgical Specialist",
-    imageUrl: null as unknown as string,
+    imageUrl: null,
     position: "외과전문의",
     specialty: "원장",
-    education: ["준비 중입니다"],
-    memberships: ["준비 중입니다"],
+    education: null,
+    memberships: null,
   },
 };

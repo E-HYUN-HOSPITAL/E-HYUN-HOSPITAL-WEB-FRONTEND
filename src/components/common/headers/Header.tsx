@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./header.module.scss";
 import { HEADER_MENU, type SubMenuItem } from "../../../data/menu";
 
@@ -18,6 +19,8 @@ type Props = {
 
 export const Header = ({ sectionRefs, activeSection, handleScroll }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const goHome = () => {
     window.location.href = "/";
@@ -27,15 +30,21 @@ export const Header = ({ sectionRefs, activeSection, handleScroll }: Props) => {
     if (item.type === "scroll") {
       e.preventDefault();
 
-      const targetRef = sectionRefs[item.key];
-
-      if (targetRef) {
-        handleScroll(targetRef);
+      if (location.pathname === "/") {
+        const targetRef = sectionRefs[item.key];
+        if (targetRef && targetRef.current) {
+          handleScroll(targetRef);
+        } else {
+          console.warn(`Ref not found for key: ${item.key}`);
+        }
       } else {
-        console.warn(`Ref not found for key: ${item.key}`);
+        window.location.href = "/";
       }
+
       setIsHovered(false);
-    } else {
+    } else if (item.type === "link") {
+      e.preventDefault();
+      navigate(item.key);
       setIsHovered(false);
     }
   };
@@ -80,7 +89,9 @@ export const Header = ({ sectionRefs, activeSection, handleScroll }: Props) => {
                   <a
                     href={subItem.type === "link" ? subItem.key : "#"}
                     className={`${styles.subLink} ${
-                      subItem.type === "scroll" && activeSection === subItem.key
+                      location.pathname === "/" &&
+                      subItem.type === "scroll" &&
+                      activeSection === subItem.key
                         ? styles.active
                         : ""
                     }`}
