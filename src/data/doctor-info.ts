@@ -54,7 +54,7 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
     education: [
       "미국진단초음파협회(ARDMS)",
       "국제근골격계초음파 진단 자격자(RMSK)",
-      "대구스포츠한의학회 팀닥터 과정 수료",
+      "대한스포츠한의학회 팀닥터 과정 수료",
     ],
     memberships: [
       "대한한의학회 회원",
