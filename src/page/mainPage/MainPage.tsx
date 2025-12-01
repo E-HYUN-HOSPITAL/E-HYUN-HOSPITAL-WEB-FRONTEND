@@ -11,6 +11,7 @@ import { PromisePage } from "../../components/promise/page";
 import { NonCoveredPage } from "../../components/non-covered/page";
 import { RouteToComePage } from "../../components/route-to-come/page";
 import styles from "./mainpage.module.scss";
+import { MainPopup } from "../../components/common/popup/MainPopup";
 
 function MainPage() {
   const introduceRef = useRef<HTMLDivElement>(null);
@@ -67,6 +68,7 @@ function MainPage() {
 
   return (
     <div className={styles.container}>
+      <MainPopup />
       <Header
         sectionRefs={sectionRefs}
         activeSection={activeSection}
