@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./mainPopup.module.scss";
+import popupImg from "./popup.png";
 
 export const MainPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,10 +30,7 @@ export const MainPopup = () => {
     <div className={styles.overlay}>
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
-          <img
-            src="src\components\common\popup\popup.png"
-            alt="이현한방병원 안내"
-          />
+          <img src={popupImg} alt="이현한방병원 안내" />
         </div>
         <div className={styles.buttonGroup}>
           <button onClick={handleDoNotShowToday} className={styles.todayBtn}>
