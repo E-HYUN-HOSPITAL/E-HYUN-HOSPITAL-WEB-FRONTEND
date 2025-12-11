@@ -20,18 +20,12 @@ export const IntroducePage = forwardRef<HTMLDivElement, object>((_, ref) => {
       </div>
       <div className={styles.images}>
         <div className={styles.imageCard}>
-          <img
-            src="/hospital-interior/Exercise-Therapy-Room.webp"
-            alt="운동치료실"
-          />
-          <span>운동치료실</span>
+          <img src="/hospital-interior/intro_img1.png" alt="7층 병동" />
+          <span>7층 병동</span>
         </div>
         <div className={styles.imageCard}>
-          <img
-            src="/hospital-interior/Physical-Therapy-Room.webp"
-            alt="물리치료실"
-          />
-          <span>물리치료실</span>
+          <img src="/hospital-interior/intro_img2.png" alt="레이져집중치료실" />
+          <span>레이져집중치료실</span>
         </div>
       </div>
       <ToolBar />
