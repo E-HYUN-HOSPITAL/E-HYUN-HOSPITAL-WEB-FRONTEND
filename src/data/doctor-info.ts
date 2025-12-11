@@ -85,12 +85,4 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
       "대한한방안이비인후피부과학회 회원",
     ],
   },
-  김철규: {
-    major: "Surgical Specialist",
-    imageUrl: null,
-    position: "외과전문의",
-    specialty: "원장",
-    education: null,
-    memberships: null,
-  },
 };
