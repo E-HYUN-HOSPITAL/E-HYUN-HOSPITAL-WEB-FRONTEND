@@ -9,10 +9,10 @@ import { ToolBar } from "../common/toolBar/ToolBar";
 import styles from "./mainPage.module.scss";
 
 const Images: string[] = [
-  "/hospital-interior/Lobby-(3).webp",
-  "/hospital-interior/Skin-Treatment-Center-(6).webp",
-  "/hospital-interior/Hallway.webp",
-  "/hospital-interior/Two-Person-Room-2-3-2.webp",
+  "/hospital-interior/main_img1.png",
+  "/hospital-interior/main_img2.png",
+  "/hospital-interior/main_img3.png",
+  "/hospital-interior/main_img4.png",
 ];
 
 export const MainPageComponent = () => {
