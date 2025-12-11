@@ -11,13 +11,16 @@ export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
       if (!container) return;
 
       const options = {
-        center: new window.kakao.maps.LatLng(36.1554, 128.431036),
+        center: new window.kakao.maps.LatLng(36.1543382, 128.431191),
         level: 3,
       };
 
       const map = new window.kakao.maps.Map(container, options);
 
-      const markerPosition = new window.kakao.maps.LatLng(36.1554, 128.431036);
+      const markerPosition = new window.kakao.maps.LatLng(
+        36.1543382,
+        128.431191
+      );
 
       const marker = new window.kakao.maps.Marker({
         position: markerPosition,
@@ -35,7 +38,7 @@ export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
         <div className={styles.infoContainer}>
           <h2 className={styles.title}>Location</h2>
           <p className={styles.address}>
-            경상북도 구미시 산동읍 신당1로3길, 6F 7F
+            경상북도 구미시 산동읍 신당1로3길 3, 6F 7F
           </p>
           <p className={styles.tel}>T. 054-471-2000</p>
 
@@ -52,14 +55,14 @@ export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
               </li>
               <li>
                 <span>점심시간</span>
-                <span>없음</span>
+                <span>점심시간 없이 진료합니다</span>
               </li>
             </ul>
           </div>
 
           <div className={styles.parking}>
             <h3>주차장</h3>
-            <p> 경상북도 구미시 산동읍 1426, 가람주차장</p>
+            <p> 가람주차장, 우항공원 주차장, 건물 지하주차장 지원합니다</p>
           </div>
           <p className={styles.notice}>
             *입원환자 당일무료/외래환자 최대 2시간 지원가능
