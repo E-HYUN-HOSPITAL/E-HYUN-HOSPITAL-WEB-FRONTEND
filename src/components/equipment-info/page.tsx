@@ -8,7 +8,7 @@ import {
 import { MiniButton } from "../common/miniButton/MIniButton";
 
 export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
-  const [selected, setSelected] = useState<EquipmentCategory>("hanbang");
+  const [selected, setSelected] = useState<EquipmentCategory>("skincare");
   const [selectedEquipment, setSelectedEquipment] = useState<number>(1);
 
   const currentEquipmentList = EQUIPMENT_DATA[selected];
@@ -23,19 +23,14 @@ export const EquipmentInfo = forwardRef<HTMLDivElement, object>((_, ref) => {
         <div className={styles.titleText}>장비 소개</div>
         <div className={styles.buttonBox}>
           <MiniButton
-            text="한방"
-            selected={selected === "hanbang"}
-            onClick={() => setSelected("hanbang")}
-          />
-          <MiniButton
-            text="양방"
-            selected={selected === "yangbang"}
-            onClick={() => setSelected("yangbang")}
-          />
-          <MiniButton
-            text="피부과"
+            text="피부"
             selected={selected === "skincare"}
             onClick={() => setSelected("skincare")}
+          />
+          <MiniButton
+            text="근골격통증"
+            selected={selected === "musculoskeletal_pain"}
+            onClick={() => setSelected("musculoskeletal_pain")}
           />
         </div>
 
