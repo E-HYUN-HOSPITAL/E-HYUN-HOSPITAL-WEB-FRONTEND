@@ -1,7 +1,7 @@
 import { Header } from "../../components/common/headers/Header";
 import { Footer } from "../../components/footer/Footer";
 import { TreatmentTable } from "../../components/treatment/TreatmentTable";
-import { HAIR_REMOVAL_DATA } from "../../data/treatment-data";
+import { HAIR_REMOVAL_DATA, LIFTING_DATA } from "../../data/treatment-data";
 
 const dummyRefs = {
   introduce: { current: null },
@@ -21,6 +21,8 @@ const HairRemovalPage = () => {
         handleScroll={() => {}}
       />
       <TreatmentTable data={HAIR_REMOVAL_DATA} />
+      <div style={{ height: "4rem" }}></div>
+      <TreatmentTable data={LIFTING_DATA} />
       <Footer />
     </div>
   );

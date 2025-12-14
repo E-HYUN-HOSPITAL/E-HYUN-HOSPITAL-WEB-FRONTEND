@@ -8,11 +8,10 @@ import { lazy, Suspense } from "react";
 
 const MainPage = lazy(() => import("./page/mainPage/MainPage"));
 const HairRemovalPage = lazy(() => import("./pages/hair-removal"));
-const PigmentPage = lazy(() => import("./pages/pigment"));
 const TattooPage = lazy(() => import("./pages/tattoo"));
 const AcnePage = lazy(() => import("./pages/acne"));
-const LiftingPage = lazy(() => import("./pages/lifting"));
 const CarePage = lazy(() => import("./pages/care"));
+const AfterEffectsPage = lazy(() => import("./pages/aftereffects"));
 
 const Loading = () => (
   <div style={{ paddingTop: "10rem", textAlign: "center" }}>Loading...</div>
@@ -38,10 +37,10 @@ export const router = createBrowserRouter(
         }
       />
       <Route
-        path="/pigment/*"
+        path="/lifting/*"
         element={
           <Suspense fallback={<Loading />}>
-            <PigmentPage />
+            <HairRemovalPage />
           </Suspense>
         }
       />
@@ -62,10 +61,10 @@ export const router = createBrowserRouter(
         }
       />
       <Route
-        path="/lifting/*"
+        path="/pigment/*"
         element={
           <Suspense fallback={<Loading />}>
-            <LiftingPage />
+            <AcnePage />
           </Suspense>
         }
       />
@@ -74,6 +73,14 @@ export const router = createBrowserRouter(
         element={
           <Suspense fallback={<Loading />}>
             <CarePage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/aftereffects/*"
+        element={
+          <Suspense fallback={<Loading />}>
+            <AfterEffectsPage />
           </Suspense>
         }
       />
