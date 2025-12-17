@@ -1,7 +1,7 @@
 import { Header } from "../../components/common/headers/Header";
 import { Footer } from "../../components/footer/Footer";
 import { TreatmentTable } from "../../components/treatment/TreatmentTable";
-import { ACNE_DATA } from "../../data/treatment-data";
+import { ACNE_DATA, PIGMENT_DATA } from "../../data/treatment-data";
 
 const dummyRefs = {
   introduce: { current: null },
@@ -21,6 +21,8 @@ const AcnePage = () => {
         handleScroll={() => {}}
       />
       <TreatmentTable data={ACNE_DATA} />
+      <div style={{ height: "4rem" }}></div>
+      <TreatmentTable data={PIGMENT_DATA} />
       <Footer />
     </div>
   );

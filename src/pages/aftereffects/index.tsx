@@ -1,7 +1,5 @@
 import { Header } from "../../components/common/headers/Header";
 import { Footer } from "../../components/footer/Footer";
-import { TreatmentTable } from "../../components/treatment/TreatmentTable";
-import { LIFTING_DATA } from "../../data/treatment-data";
 
 const dummyRefs = {
   introduce: { current: null },
@@ -12,7 +10,7 @@ const dummyRefs = {
   route: { current: null },
 };
 
-const LiftingPage = () => {
+const AfterEffectsPage = () => {
   return (
     <div style={{ paddingTop: "8rem" }}>
       <Header
@@ -20,10 +18,10 @@ const LiftingPage = () => {
         activeSection=""
         handleScroll={() => {}}
       />
-      <TreatmentTable data={LIFTING_DATA} />
+      <p> 페이지 준비 중입니다</p>
       <Footer />
     </div>
   );
 };
 
-export default LiftingPage;
+export default AfterEffectsPage;

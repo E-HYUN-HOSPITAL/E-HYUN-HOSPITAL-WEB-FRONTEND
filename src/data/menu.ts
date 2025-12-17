@@ -19,23 +19,21 @@ export const HEADER_MENU: MainMenuItem[] = [
       { label: "의료진 소개", key: "doctor", type: "scroll" },
       { label: "장비안내", key: "equipment", type: "scroll" },
       { label: "병원내부 사진", key: "hospital", type: "scroll" },
-      { label: "비급여 항목 안내", key: "noncovered", type: "scroll" },
+      { label: "비급여 항목 안내", key: "nonCovered", type: "scroll" },
       { label: "오시는 길", key: "route", type: "scroll" },
     ],
   },
   {
-    label: "제모 센터",
+    label: "제모/리프팅",
     key: "hair_removal",
     children: [
       { label: "여성 제모", key: "/hair-removal/women", type: "link" },
       { label: "남성 제모", key: "/hair-removal/men", type: "link" },
+      { label: "슈링크 유니버스", key: "/lifting/shurink", type: "link" },
+      { label: "올리지오", key: "/lifting/oligio", type: "link" },
     ],
   },
-  {
-    label: "색소 센터",
-    key: "pigment",
-    children: [{ label: "기미/잡티", key: "/pigment/freckle", type: "link" }],
-  },
+
   {
     label: "문신제거",
     key: "tattoo",
@@ -47,10 +45,14 @@ export const HEADER_MENU: MainMenuItem[] = [
     ],
   },
   {
-    label: "홍조/여드름/모공",
+    label: "기미/홍조/여드름/모공",
     key: "acne",
     children: [
-      { label: "클라리티 레이저", key: "/acne/clarity", type: "link" },
+      { label: "피코토닝", key: "/acne/pico", type: "link" },
+      { label: "할리우드토닝", key: "/acne/hollywood", type: "link" },
+      { label: "제네시스토닝", key: "/acne/genesis", type: "link" },
+
+      { label: "클라리티2토닝", key: "/acne/clarity2", type: "link" },
       {
         label: "골드PPT(압출+스케일링 포함)",
         key: "/acne/goldPPT",
@@ -60,22 +62,26 @@ export const HEADER_MENU: MainMenuItem[] = [
     ],
   },
   {
-    label: "리프팅",
-    key: "lifting",
-    children: [
-      { label: "슈링크 유니버스", key: "/lifting/shurink", type: "link" },
-      { label: "올리지오", key: "/lifting/oligio", type: "link" },
-    ],
-  },
-  {
-    label: "피부관리프로그램",
+    label: "메디컬 스킨케어",
     key: "care",
     children: [
+      { label: "스킨부스터", key: "/care/skinbooster", type: "link" },
       { label: "스케일링 관리", key: "/care/scaling", type: "link" },
       { label: "아쿠아필", key: "/care/aquapeel", type: "link" },
       { label: "라라필", key: "/care/lalapeel", type: "link" },
       { label: "LDM 재생", key: "/care/ldm", type: "link" },
       { label: "내맘대로 피부관리", key: "/care/self", type: "link" },
+    ],
+  },
+  {
+    label: "교통사고 후유증/수술 후 재활입원/통증",
+    key: "aftereffects",
+    children: [
+      {
+        label: "교통사고 후유증/수술 후 재활입원/통증",
+        key: "/aftereffects/",
+        type: "link",
+      },
     ],
   },
 ];

@@ -165,7 +165,7 @@ export const LIFTING_DATA: TreatmentCategory[] = [
 
 export const SKIN_CARE_DATA: TreatmentCategory[] = [
   {
-    title: "피부관리프로그램",
+    title: "메디컬 스킨케어",
     headers: ["정가(1회)", "1회"],
     items: [
       {
