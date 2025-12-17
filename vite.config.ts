@@ -8,6 +8,13 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: "https://www.e-hyun-gumi.kr",
+      dynamicRoutes: [
+        "/hair-removal",
+        "/tattoo",
+        "/acne",
+        "/care",
+        "/aftereffects",
+      ],
     }),
   ],
 });
