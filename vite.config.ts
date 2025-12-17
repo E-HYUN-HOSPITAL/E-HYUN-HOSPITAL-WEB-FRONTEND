@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     sitemap({
-      hostname: "https://www.e-hyun-hospital.kr",
+      hostname: "https://www.e-hyun-gumi.kr",
     }),
   ],
 });
