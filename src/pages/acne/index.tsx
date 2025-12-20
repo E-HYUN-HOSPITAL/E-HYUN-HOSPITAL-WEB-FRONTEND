@@ -2,6 +2,7 @@ import { Header } from "../../components/common/headers/Header";
 import { Footer } from "../../components/footer/Footer";
 import { TreatmentTable } from "../../components/treatment/TreatmentTable";
 import { ACNE_DATA, PIGMENT_DATA } from "../../data/treatment-data";
+import { SubPageBanner } from "../../components/common/banner/SubpageBanner";
 
 const dummyRefs = {
   introduce: { current: null },
@@ -19,6 +20,11 @@ const AcnePage = () => {
         sectionRefs={dummyRefs}
         activeSection=""
         handleScroll={() => {}}
+      />
+      <SubPageBanner
+        title="기미/홍조/여드름/모공"
+        subTitle="Acne & Pigment"
+        bgImage="/public/banners/acne.png"
       />
       <TreatmentTable data={ACNE_DATA} />
       <div style={{ height: "4rem" }}></div>
