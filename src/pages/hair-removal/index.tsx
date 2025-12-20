@@ -24,7 +24,7 @@ const HairRemovalPage = () => {
       <SubPageBanner
         title="제모 클리닉 & 리프팅"
         subTitle="Hair Removal & Lifting"
-        bgImage="/public/banners/removal&lifting.png"
+        bgImage="/banners/removal&lifting.png"
       />
       <TreatmentTable data={HAIR_REMOVAL_DATA} />
       <div style={{ height: "4rem" }}></div>

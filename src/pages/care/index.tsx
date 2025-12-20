@@ -24,7 +24,7 @@ const CarePage = () => {
       <SubPageBanner
         title="메디컬 스킨케어"
         subTitle="Medical Skincare"
-        bgImage="/public/banners/medi.png"
+        bgImage="/banners/medi.png"
       />
       <TreatmentTable data={SKIN_CARE_DATA} />
       <Footer />

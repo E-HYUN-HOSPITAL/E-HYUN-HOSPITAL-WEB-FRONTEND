@@ -19,7 +19,7 @@ const AfterEffectsPage = () => {
         handleScroll={() => {}}
       />
       <p style={{ textAlign: "center" }}>
-        <img src="/public/banners/affterEffects_dummy.jpg" alt="임시 이미지" />
+        <img src="/banners/affterEffects_dummy.jpg" alt="임시 이미지" />
       </p>
       <Footer />
     </div>
