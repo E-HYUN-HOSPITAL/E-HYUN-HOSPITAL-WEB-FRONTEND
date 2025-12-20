@@ -3,9 +3,10 @@ import { type TreatmentCategory } from "../../data/treatment-data";
 
 interface Props {
   data: TreatmentCategory[];
+  extraNotice?: string;
 }
 
-export const TreatmentTable = ({ data }: Props) => {
+export const TreatmentTable = ({ data, extraNotice }: Props) => {
   return (
     <div className={styles.container}>
       {data.map((category, index) => (
@@ -45,7 +46,8 @@ export const TreatmentTable = ({ data }: Props) => {
           </div>
         </div>
       ))}
-        <span className={styles.notice}>※ 모든 시술 VAT 별도</span>
+      <span className={styles.notice}>※ 모든 시술 VAT 별도</span>
+      {extraNotice && <span className={styles.notice}>{extraNotice}</span>}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { Header } from "../../components/common/headers/Header";
 import { Footer } from "../../components/footer/Footer";
+import { SubPageBanner } from "../../components/common/banner/SubpageBanner";
 
 const dummyRefs = {
   introduce: { current: null },
@@ -18,7 +19,9 @@ const AfterEffectsPage = () => {
         activeSection=""
         handleScroll={() => {}}
       />
-      <p> 페이지 준비 중입니다</p>
+      <p style={{ textAlign: "center" }}>
+        <img src="/public/banners/affterEffects_dummy.jpg" alt="임시 이미지" />
+      </p>
       <Footer />
     </div>
   );
