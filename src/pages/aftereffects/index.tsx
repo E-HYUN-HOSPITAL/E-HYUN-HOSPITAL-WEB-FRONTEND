@@ -1,6 +1,6 @@
 import { Header } from "../../components/common/headers/Header";
 import { Footer } from "../../components/footer/Footer";
-import { SubPageBanner } from "../../components/common/banner/SubpageBanner";
+import { SubPageBanner } from "../../components/common/banner/SubPageBanner";
 
 const dummyRefs = {
   introduce: { current: null },
