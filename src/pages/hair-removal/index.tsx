@@ -52,7 +52,7 @@ const HairRemovalPage = () => {
       <SubPageBanner
         title="제모 클리닉 & 리프팅"
         subTitle="Hair Removal & Lifting"
-        bgImage="/public/banners/removal&lifting.png"
+        bgImage="/banners/removal&lifting.png"
       />
       <EquipmentIntro data={HAIR_QEUIPMENT} />
 

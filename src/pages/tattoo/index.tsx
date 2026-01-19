@@ -38,7 +38,7 @@ const TattooPage = () => {
       <SubPageBanner
         title="문신제거"
         subTitle="Tattoo Removal"
-        bgImage="/public/banners/tattoo.png"
+        bgImage="/banners/tattoo.png"
       />
 
       <EquipmentIntro

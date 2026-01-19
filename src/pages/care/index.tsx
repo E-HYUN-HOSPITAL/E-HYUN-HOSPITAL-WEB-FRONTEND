@@ -8,6 +8,7 @@ import {
   type EquipmentItem,
 } from "../../components/treatment/EquipmentIntro";
 
+
 const dummyRefs = {
   introduce: { current: null },
   doctor: { current: null },
@@ -45,7 +46,7 @@ const CarePage = () => {
       <SubPageBanner
         title="메디컬 스킨케어"
         subTitle="Medical Skincare"
-        bgImage="/public/banners/medi.png"
+        bgImage="/banners/medi.png"
       />
       <EquipmentIntro data={SKIN_EQUIPMENT} />
 

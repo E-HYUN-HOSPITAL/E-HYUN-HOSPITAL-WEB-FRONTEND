@@ -3,6 +3,7 @@ import { Footer } from "../../components/footer/Footer";
 import { TreatmentTable } from "../../components/treatment/TreatmentTable";
 import { ACNE_DATA, PIGMENT_DATA } from "../../data/treatment-data";
 import { SubPageBanner } from "../../components/common/banner/SubPageBanner";
+
 import {
   EquipmentIntro,
   type EquipmentItem,
@@ -51,7 +52,7 @@ const AcnePage = () => {
       <SubPageBanner
         title="기미/홍조/여드름/모공"
         subTitle="Acne & Pigment"
-        bgImage="/public/banners/acne.png"
+        bgImage="/banners/acne.png"
       />
       <EquipmentIntro data={ACNE_QEUIPMENT} />
 
