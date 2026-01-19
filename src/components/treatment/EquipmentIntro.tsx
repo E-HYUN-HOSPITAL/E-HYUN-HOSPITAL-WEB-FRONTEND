@@ -1,9 +1,5 @@
 import styles from "./equipmentIntro.module.scss";
 
-import clarityImg from "/equipments/dermatology/clarity2.webp";
-import oligioImg from "/equipments/dermatology/올리지오.webp";
-import shurinkImg from "/equipments/dermatology/shrink_universe.webp";
-
 export interface EquipmentItem {
   name: string;
   engName: string;
