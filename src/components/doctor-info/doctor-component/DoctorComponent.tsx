@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { DOCTOR_DATA } from "../../../data/doctor-info";
 import styles from "./doctorComponenet.module.scss";
 
@@ -7,6 +8,7 @@ type Props = {
 
 export const DoctorComponent = ({ doctorName }: Props) => {
   const doctorInfo = DOCTOR_DATA[doctorName];
+  const [isResearchOpen, setIsResearchOpen] = useState(false);
 
   if (!doctorInfo) {
     return <div>의사 정보를 찾을 수 없습니다.</div>;
@@ -39,6 +41,28 @@ export const DoctorComponent = ({ doctorName }: Props) => {
                 <div key={index}>{item}</div>
               ))}
           </div>
+
+          {doctorInfo.research && doctorInfo.research.length > 0 && (
+            <div className={styles.researchSection}>
+              <button
+                className={styles.toggleBtn}
+                onClick={() => setIsResearchOpen(!isResearchOpen)}
+              >
+                더보기
+              </button>
+
+              {isResearchOpen && (
+                <div className={styles.researchList}>
+                  <div className={styles.researchTitle}>&lt;논문&gt;</div>
+                  {doctorInfo.research.map((item, index) => (
+                    <div key={index} className={styles.researchItem}>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
