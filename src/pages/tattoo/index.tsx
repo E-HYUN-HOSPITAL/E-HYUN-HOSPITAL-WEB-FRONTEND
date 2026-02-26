@@ -35,11 +35,7 @@ const TattooPage = () => {
         activeSection=""
         handleScroll={() => {}}
       />
-      <SubPageBanner
-        title="문신제거"
-        subTitle="Tattoo Removal"
-        bgImage="/banners/tattoo.png"
-      />
+      <SubPageBanner title="문신제거" subTitle="Tattoo Removal" />
 
       <EquipmentIntro
         title="TATTOO REMOVAL SYSTEM"

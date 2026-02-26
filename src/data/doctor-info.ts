@@ -5,6 +5,7 @@ export interface DoctorType {
   specialty: string;
   education: string[] | null;
   memberships: string[] | null;
+  research?: string[] | null;
 }
 
 export const DOCTOR_DATA: { [key: string]: DoctorType } = {
@@ -84,5 +85,41 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
       "대한한방소아과학회 회원",
       "대한한방안이비인후피부과학회 회원",
     ],
+  },
+  이신희: {
+    major: "Clinic Director",
+    imageUrl: "/doctor-info/oriental_pediatrics_specialist.jpg",
+    position: "한방소아과 전문의",
+    specialty: "한의사",
+    education: [
+      "대구한의대 한의학과 졸업",
+      "대구자생한방병원 일반수련의",
+      "대구한의대한방병원 전문수련의",
+      "전 미소로한의원 대구점 진료원장",
+      "전 수월한방병원 수성점 진료원장",
+      "전 당당한방병원 달서점 진료원장",
+    ],
+    memberships: [
+      "한방소아과학회 정회원",
+      "KAMMS 추나과정 이수",
+      "RMSK 이수",
+      "턱관절통합의학연구소 TBT과정 이수",
+      "한방비만학회 비만치료 이수",
+      "아동심리상담사 1,2급",
+    ],
+    research: [
+      "A Review of Korean Medicine Treatment for Hyperhidrosis",
+      "A Review of Korean Medicine Treatment for Seizure Disease in Children",
+      "4 Cases of Chronic Abdominal Pain Children Treated by Sihogyeji-tanggagam with Acupuncture and Moxibustion Treatment",
+      "Recent Domestic and International Trends in Clinical Research of Herbal Medicine Treatment for Crohn’s disease",
+    ],
+  },
+  마영진: {
+    major: "Clinic Director",
+    imageUrl: null,
+    position: "비뇨기과 전문의",
+    specialty: "의사",
+    education: null,
+    memberships: null,
   },
 };

@@ -52,6 +52,46 @@
         line-height: 1.5;
         white-space: normal;
       }
+
+      .researchSection {
+        margin-top: 1rem;
+
+        .toggleBtn {
+          background: none;
+          border: none;
+          color: #787878;
+          font-weight: bold;
+          font-size: 0.95em;
+          padding: 0.3rem 0;
+          cursor: pointer;
+          transition: color 0.2s;
+
+          &:hover {
+            color: #504440;
+          }
+        }
+
+        .researchList {
+          margin-top: 0.5rem;
+          padding-left: 0.5rem;
+          border-left: 2px solid #eaeaea;
+          animation: fadeIn 0.3s ease-in-out;
+
+          .researchTitle {
+            font-weight: bold;
+            color: #787878;
+            margin-bottom: 0.3rem;
+            font-size: 0.95em;
+          }
+
+          .researchItem {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 0.3rem;
+            line-height: 1.5;
+          }
+        }
+      }
     }
 
     &:only-child {

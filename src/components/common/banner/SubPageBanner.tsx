@@ -3,7 +3,7 @@ import styles from "./SubPageBanner.module.scss";
 interface SubPageBannerProps {
   title?: string;
   subTitle?: string;
-  bgImage: string;
+  bgImage?: string;
 }
 
 export const SubPageBanner = ({

@@ -8,7 +8,6 @@ import {
   type EquipmentItem,
 } from "../../components/treatment/EquipmentIntro";
 
-
 const dummyRefs = {
   introduce: { current: null },
   doctor: { current: null },
@@ -21,8 +20,8 @@ const dummyRefs = {
 const SKIN_EQUIPMENT: EquipmentItem[] = [
   {
     name: "더마샤인프로",
-    engName: "Derma Shine PRo",
-    img: "/equipments/dermatology/017.png",
+    engName: "Derma Shine Pro",
+    img: "/equipments/dermatology/dermashinepro.png",
     tags: ["#물광주사", "#속건조해결", "#수분충전"],
     desc: "피부 진피층에 히알루론산 등 유효 성분을 균일하고 정확하게 주입합니다. 건조하고 메마른 피부에 즉각적인 수분감을 주어 촉촉하게 빛나는 물광 피부를 선사합니다.",
   },
@@ -46,7 +45,6 @@ const CarePage = () => {
       <SubPageBanner
         title="메디컬 스킨케어"
         subTitle="Medical Skincare"
-        bgImage="/banners/medi.png"
       />
       <EquipmentIntro data={SKIN_EQUIPMENT} />
 

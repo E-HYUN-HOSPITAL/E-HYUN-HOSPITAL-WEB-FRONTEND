@@ -20,7 +20,7 @@ const ACNE_QEUIPMENT: EquipmentItem[] = [
   {
     name: "헐리우드 스펙트라",
     engName: "Hollywood Spectra",
-    img: "/equipments/dermatology/016.png",
+    img: "/equipments/dermatology/hollywoodspectra.png",
     tags: ["#여드름자국", "#피부톤보정", "#광채피부"],
     desc: "균일한 레이저 빔이 피부 톤을 환하게 밝히고, 거친 피부 결을 부드럽게 정돈합니다. 여드름 붉은 자국 완화와 전체적인 안색 개선에 탁월합니다.",
   },
@@ -49,11 +49,7 @@ const AcnePage = () => {
         activeSection=""
         handleScroll={() => {}}
       />
-      <SubPageBanner
-        title="기미/홍조/여드름/모공"
-        subTitle="Acne & Pigment"
-        bgImage="/banners/acne.png"
-      />
+      <SubPageBanner title="기미/홍조/여드름/모공" subTitle="Acne & Pigment" />
       <EquipmentIntro data={ACNE_QEUIPMENT} />
 
       <TreatmentTable data={ACNE_DATA} />
