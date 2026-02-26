@@ -114,4 +114,12 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
       "Recent Domestic and International Trends in Clinical Research of Herbal Medicine Treatment for Crohn’s disease",
     ],
   },
+  마영진: {
+    major: "Clinic Director",
+    imageUrl: null,
+    position: "비뇨기과 전문의",
+    specialty: "의사",
+    education: null,
+    memberships: null,
+  },
 };
