@@ -93,6 +93,11 @@
     font-size: 1rem;
   }
 
+  .strikePrice {
+    text-decoration: line-through;
+    color: #a0a0a0;
+  }
+
   tbody tr:hover {
     background-color: #fafafa;
   }
