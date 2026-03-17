@@ -35,7 +35,7 @@ export const TreatmentTable = ({ data, extraNotice }: Props) => {
                       )}
                     </td>
                     {item.prices.map((price, pIndex) => (
-                      <td key={pIndex} className={styles.priceCell}>
+                      <td key={pIndex} className={`${styles.priceCell} ${pIndex === 0 && price !== "-" ? styles.strikePrice:""}`}>
                         {price}
                       </td>
                     ))}
