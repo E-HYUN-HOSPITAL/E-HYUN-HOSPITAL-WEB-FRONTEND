@@ -73,31 +73,31 @@ export const HAIR_REMOVAL_DATA: TreatmentCategory[] = [
 export const PIGMENT_DATA: TreatmentCategory[] = [
   {
     title: "색소",
-    headers: ["정가(1회)", "1회", "3회", "5회"],
+    headers: ["정가(1회)", "1회", "5회", "10회"],
     items: [
       {
         name: "할리우드토닝+진정관리",
         description:
           "나노세컨드의 Nd:YAG 레이저를 이용하여 멜라닌을 부드럽게 분해시켜 피부톤을 맑고 균일하게 개선하는 저자극 레이저 토닝 시술",
-        prices: ["70,000", "45,000", "120,000", "190,000"],
+        prices: ["70,000", "45,000", "200,000", "360,000"],
       },
       {
         name: "제네시스토닝+진정관리",
         description:
           "진피층에 미세한 열을 전달하여 콜라겐 재생을 촉진하고 피부의 전반적인 컨디션과 탄력을 개선하는 레이저 시술",
-        prices: ["70,000", "45,000", "120,000", "190,000"],
+        prices: ["70,000", "45,000", "200,000", "360,000"],
       },
       {
         name: "피코토닝+진정관리",
         description:
           "피코초 레이저로 색소 입자를 나노초보다 더 미세하게 파괴하며 부작용을 최소화한 시술",
-        prices: ["110,000", "70,000", "190,000", "310,000"],
+        prices: ["110,000", "70,000", "325,000", "600,000"],
       },
       {
         name: "듀얼토닝+진정관리",
         description:
           "나노세컨드 레이저와 제네시스 레이저의 복합 관리를 통한 효과 극대화",
-        prices: ["95,000", "65,000", "180,000", "290,000"],
+        prices: ["95,000", "65,000", "300,000", "550,000"],
       },
     ],
   },
@@ -165,6 +165,19 @@ export const LIFTING_DATA: TreatmentCategory[] = [
 
 export const SKIN_CARE_DATA: TreatmentCategory[] = [
   {
+    title: "스킨부스터",
+    headers: ["정가", "정가"],
+    items: [
+      { name: "미쥬안(PN) 2cc + 모델링팩", prices: ["120,000", "120,000"] },
+      { name: "PDRN 2cc + 모델링팩", prices: ["90,000", "90,000"] },
+      {
+        name: "쥬베룩스킨 3cc + AMTS + 모델링팩",
+        prices: ["120,000", "120,000"],
+      },
+    ],
+  },
+
+  {
     title: "메디컬 스킨케어",
     headers: ["정가(1회)", "1회"],
     items: [
@@ -178,6 +191,7 @@ export const SKIN_CARE_DATA: TreatmentCategory[] = [
       { name: "LDM 재생관리", prices: ["85,000", "70,000"] },
     ],
   },
+
   {
     title: "내맘대로 피부관리 4종 택1",
     headers: ["정가(1회)", "1회", "5회", "10회"],
@@ -187,6 +201,16 @@ export const SKIN_CARE_DATA: TreatmentCategory[] = [
         description: "+ 레필레오 앰플 + LED + 모델링팩",
         prices: ["35,000", "35,000", "150,000", "280,000"],
       },
+    ],
+  },
+
+  {
+    title: "보톡스",
+    headers: ["정가(코어톡스)", "코어톡스"],
+    items: [
+      { name: "이마 / 미간 / 눈가", prices: ["29,000", "29,000"] },
+      { name: "자갈턱", prices: ["29,000", "29,000"] },
+      { name: "사각턱", prices: ["39,000", "39,000"] },
     ],
   },
 ];

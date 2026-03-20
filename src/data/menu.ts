@@ -71,6 +71,7 @@ export const HEADER_MENU: MainMenuItem[] = [
       { label: "라라필", key: "/care/lalapeel", type: "link" },
       { label: "LDM 재생", key: "/care/ldm", type: "link" },
       { label: "내맘대로 피부관리", key: "/care/self", type: "link" },
+      { label: "보톡스", key: "/care/botox", type: "link" },
     ],
   },
   {
