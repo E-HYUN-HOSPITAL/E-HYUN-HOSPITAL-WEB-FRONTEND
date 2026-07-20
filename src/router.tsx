@@ -7,11 +7,11 @@ import {
 import { lazy, Suspense } from "react";
 
 const MainPage = lazy(() => import("./page/mainPage/MainPage"));
+const AfterEffectsPage = lazy(() => import("./pages/aftereffects"));
 const HairRemovalPage = lazy(() => import("./pages/hair-removal"));
 const TattooPage = lazy(() => import("./pages/tattoo"));
 const AcnePage = lazy(() => import("./pages/acne"));
 const CarePage = lazy(() => import("./pages/care"));
-const AfterEffectsPage = lazy(() => import("./pages/aftereffects"));
 
 const Loading = () => (
   <div style={{ paddingTop: "10rem", textAlign: "center" }}>Loading...</div>
@@ -84,6 +84,6 @@ export const router = createBrowserRouter(
           </Suspense>
         }
       />
-    </>
-  )
+    </>,
+  ),
 );

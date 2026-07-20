@@ -24,6 +24,17 @@ export const HEADER_MENU: MainMenuItem[] = [
     ],
   },
   {
+    label: "교통사고 후유증/수술 후 재활입원/통증",
+    key: "aftereffects",
+    children: [
+      {
+        label: "교통사고 후유증/수술 후 재활입원/통증",
+        key: "/aftereffects/",
+        type: "link",
+      },
+    ],
+  },
+  {
     label: "제모/리프팅",
     key: "hair_removal",
     children: [
@@ -72,17 +83,6 @@ export const HEADER_MENU: MainMenuItem[] = [
       { label: "LDM 재생", key: "/care/ldm", type: "link" },
       { label: "내맘대로 피부관리", key: "/care/self", type: "link" },
       { label: "보톡스", key: "/care/botox", type: "link" },
-    ],
-  },
-  {
-    label: "교통사고 후유증/수술 후 재활입원/통증",
-    key: "aftereffects",
-    children: [
-      {
-        label: "교통사고 후유증/수술 후 재활입원/통증",
-        key: "/aftereffects/",
-        type: "link",
-      },
     ],
   },
 ];
