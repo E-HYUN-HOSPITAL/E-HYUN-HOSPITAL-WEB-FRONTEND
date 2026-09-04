@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./mainPopup.module.scss";
 import popupImg from "./popup_chuseok.png";
-import popupImg2 from "./popup_firstEvent.png";
+import popupImg2 from "./popup_firstevent.png";
 import popupImg3 from "./popup_removalEvent.png";
 import popupImg4 from "./popup_mounjaro.png";
 
