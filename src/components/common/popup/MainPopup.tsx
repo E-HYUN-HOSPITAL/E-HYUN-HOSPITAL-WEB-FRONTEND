@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./mainPopup.module.scss";
-import popupImg2 from "./popup2.png";
-import popupImg3 from "./popup3.jpg";
+import popupImg from "./popup_chuseok.png";
+import popupImg2 from "./popup_firstevent.png";
+import popupImg3 from "./popup_removalEvent.png";
+import popupImg4 from "./popup_mounjaro.png";
 
 interface PopupItem {
   id: number;
@@ -10,8 +12,10 @@ interface PopupItem {
 }
 
 const POPUP_DATA = [
-  { id: 1, src: popupImg2, alt: "이현한방병원 이벤트" },
-  { id: 2, src: popupImg3, alt: "이현한방병원 이벤트" },
+  { id: 1, src: popupImg2, alt: "이현한방병원 첫 방문 이벤트" },
+  { id: 2, src: popupImg3, alt: "이현한방병원 제모 이벤트" },
+  { id: 3, src: popupImg, alt: "이현한방병원 추석 이벤트" },
+  { id: 4, src: popupImg4, alt: "이현한방병원 마운자로" },
 ];
 
 export const MainPopup = () => {
@@ -72,22 +76,6 @@ export const MainPopup = () => {
             </div>
           </div>
         );
-        //   <div className={styles.container}>
-        //     <div className={styles.imageWrapper}>
-        //       {activePopups.map((popup, index) => (
-        //         <img key={popup.id} src={popup.src} alt={popup.alt} />
-        //       ))}
-        //     </div>
-        //     <div className={styles.buttonGroup}>
-        //       <button onClick={handleDoNotShowToday} className={styles.todayBtn}>
-        //         오늘 하루 보지 않기
-        //       </button>
-        //       <button onClick={handleClose} className={styles.closeBtn}>
-        //         닫기
-        //       </button>
-        //     </div>
-        //   </div>
-        // </div>
       })}
     </div>
   );

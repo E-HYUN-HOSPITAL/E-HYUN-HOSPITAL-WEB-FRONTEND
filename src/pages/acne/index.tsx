@@ -49,7 +49,7 @@ const AcnePage = () => {
         activeSection=""
         handleScroll={() => {}}
       />
-      <SubPageBanner title="기미/홍조/여드름/모공" subTitle="Acne & Pigment" />
+      <SubPageBanner title="홍조/여드름/모공" subTitle="Acne & Pigment" />
       <EquipmentIntro data={ACNE_QEUIPMENT} />
 
       <TreatmentTable data={ACNE_DATA} />

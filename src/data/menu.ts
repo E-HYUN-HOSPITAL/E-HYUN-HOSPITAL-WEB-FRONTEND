@@ -56,7 +56,7 @@ export const HEADER_MENU: MainMenuItem[] = [
     ],
   },
   {
-    label: "기미/홍조/여드름/모공",
+    label: "홍조/여드름/모공",
     key: "acne",
     children: [
       { label: "피코토닝", key: "/acne/pico", type: "link" },
@@ -65,8 +65,8 @@ export const HEADER_MENU: MainMenuItem[] = [
 
       { label: "클라리티2토닝", key: "/acne/clarity2", type: "link" },
       {
-        label: "골드PPT(압출+스케일링 포함)",
-        key: "/acne/goldPPT",
+        label: "골드PTT(압출+스케일링 포함)",
+        key: "/acne/goldPTT",
         type: "link",
       },
       { label: "피코프락셀(MLA)", key: "/acne/pico", type: "link" },
@@ -78,10 +78,6 @@ export const HEADER_MENU: MainMenuItem[] = [
     children: [
       { label: "스킨부스터", key: "/care/skinbooster", type: "link" },
       { label: "스케일링 관리", key: "/care/scaling", type: "link" },
-      { label: "아쿠아필", key: "/care/aquapeel", type: "link" },
-      { label: "라라필", key: "/care/lalapeel", type: "link" },
-      { label: "LDM 재생", key: "/care/ldm", type: "link" },
-      { label: "내맘대로 피부관리", key: "/care/self", type: "link" },
       { label: "보톡스", key: "/care/botox", type: "link" },
     ],
   },
