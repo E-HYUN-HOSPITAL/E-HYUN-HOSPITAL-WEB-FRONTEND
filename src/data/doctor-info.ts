@@ -94,7 +94,7 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
     ],
   },
   김려원: {
-    major: "Clinic Director",
+    major: "Family Medicine Physician",
     imageUrl: null,
     position: "가정의학과 원장",
     specialty: "가정의학과 원장",
