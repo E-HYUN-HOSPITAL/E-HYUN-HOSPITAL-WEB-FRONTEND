@@ -34,11 +34,23 @@ export const TreatmentTable = ({ data, extraNotice }: Props) => {
                         </div>
                       )}
                     </td>
-                    {item.prices.map((price, pIndex) => (
+                    {/* {item.prices.map((price, pIndex) => (
                       <td key={pIndex} className={`${styles.priceCell} ${pIndex === 0 && price !== "-" ? styles.strikePrice:""}`}>
                         {price}
                       </td>
-                    ))}
+                    ))} */}
+                    {item.prices.map((price, pIndex) => {
+                      const isStrike =
+                        category.headers[pIndex] === "정가(1회)" && price !== "-";
+                      return (
+                        <td
+                          key={pIndex}
+                          className={`${styles.priceCell} ${isStrike ? styles.strikePrice : ""}`}
+                        >
+                          {price}
+                        </td>
+                      );
+                    })}
                   </tr>
                 ))}
               </tbody>
