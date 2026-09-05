@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && mkdir -p dist && vite build",
+    "build": "tsc -b && node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
