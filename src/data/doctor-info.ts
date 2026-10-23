@@ -93,12 +93,5 @@ export const DOCTOR_DATA: { [key: string]: DoctorType } = {
       "Recent Domestic and International Trends in Clinical Research of Herbal Medicine Treatment for Crohn’s disease",
     ],
   },
-  김려원: {
-    major: "Family Medicine Physician",
-    imageUrl: null,
-    position: "가정의학과 원장",
-    specialty: "가정의학과 원장",
-    education: null,
-    memberships: null,
-  },
+
 };
