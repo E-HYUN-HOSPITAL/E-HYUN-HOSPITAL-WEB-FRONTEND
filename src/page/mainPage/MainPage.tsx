@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { DoctorInfoPage } from "../../components/doctor-info/page";
+//import { DoctorInfoPage } from "../../components/doctor-info/page";
 import { EquipmentInfo } from "../../components/equipment-info/page";
 import { Footer } from "../../components/footer/Footer";
 import { Header } from "../../components/common/headers/Header";
@@ -77,7 +77,8 @@ function MainPage() {
       <MainPageComponent />
       <IntroducePage ref={introduceRef} />
       <PromisePage />
-      <DoctorInfoPage ref={doctorRef} />
+      {/*<DoctorInfoPage ref={doctorRef} />*/}
+    
       <EquipmentInfo ref={equipmentRef} />
       <HospitalPicturePage ref={hospitalRef} />
       <NonCoveredPage ref={nonCoveredRef} />
