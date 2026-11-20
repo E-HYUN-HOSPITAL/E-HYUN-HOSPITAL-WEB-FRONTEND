@@ -1,5 +1,6 @@
 import { ImageBtn } from "../common/imageBtn/ImageBtn";
 import styles from "./footer.module.scss";
+import { trackPhoneClick } from "../../lib/track";
 
 export const Footer = () => {
   return (
@@ -34,7 +35,15 @@ export const Footer = () => {
         <div className={styles.otherInfo}>
           대표 : 이연진 | 사업자등록번호 : 686-26-02248
         </div>
-        <div className={styles.otherInfo}>T. 054-471-2000</div>
+        <div className={styles.otherInfo}>
+          <a
+            href="tel:054-471-2000"
+            onClick={trackPhoneClick}
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            T. 054-471-2000
+          </a>
+        </div>
       </div>
     </div>
   );
