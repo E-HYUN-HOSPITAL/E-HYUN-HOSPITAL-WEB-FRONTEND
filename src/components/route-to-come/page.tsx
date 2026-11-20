@@ -2,6 +2,7 @@ import { forwardRef, useEffect } from "react";
 
 import { ToolBar } from "../common/toolBar/ToolBar";
 import styles from "./routeToCome.module.scss";
+import { trackPhoneClick } from "../../lib/track";
 
 export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
   useEffect(() => {
@@ -40,7 +41,15 @@ export const RouteToComePage = forwardRef<HTMLDivElement, object>((_, ref) => {
           <p className={styles.address}>
             경상북도 구미시 산동읍 신당1로3길 3, 6F 7F
           </p>
-          <p className={styles.tel}>T. 054-471-2000</p>
+          <p className={styles.tel}>
+            <a
+              href="tel:054-471-2000"
+              onClick={trackPhoneClick}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              T. 054-471-2000
+            </a>
+          </p>
 
           <div className={styles.hours}>
             <h3>진료 시간</h3>
