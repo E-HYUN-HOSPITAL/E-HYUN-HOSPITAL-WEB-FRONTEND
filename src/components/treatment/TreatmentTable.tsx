@@ -12,6 +12,11 @@ export const TreatmentTable = ({ data, extraNotice }: Props) => {
       {data.map((category, index) => (
         <div key={index} className={styles.categorySection}>
           <h2 className={styles.categoryTitle}>{category.title}</h2>
+           {category.note && (
+              <p style={{ fontSize: '13px', color: '#888', margin: '4px 0 12px' }}>
+                {category.note}
+              </p>
+            )}
 
           <div className={styles.tableWrapper}>
             <table className={styles.priceTable}>
