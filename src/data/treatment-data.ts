@@ -6,6 +6,7 @@ export interface TreatmentItem {
 
 export interface TreatmentCategory {
   title: string;
+   note?: string;
   headers: string[];
   items: TreatmentItem[];
   description?: string;
@@ -205,6 +206,7 @@ export const SKIN_CARE_DATA: TreatmentCategory[] = [
 
   {
     title: "보톡스",
+    note: "[MD 원장님 시술합니다]",
     headers: ["코어톡스"],
     items: [
       { name: "이마/미간/눈가/콧잔등/자갈턱", prices: ["35,000"] },
