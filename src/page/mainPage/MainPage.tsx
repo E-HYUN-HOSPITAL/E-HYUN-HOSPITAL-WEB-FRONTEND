@@ -33,7 +33,7 @@ function MainPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const HEADER_HEIGHT = 8 * 16;
+      const HEADER_HEIGHT = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) * 16 || 72;
       const scrollPosition = window.scrollY + HEADER_HEIGHT;
 
       const sections = Object.entries(sectionRefs);
@@ -56,7 +56,7 @@ function MainPage() {
 
   const handleScroll = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
-      const HEADER_HEIGHT = 8 * 16;
+      const HEADER_HEIGHT = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) * 16 || 72;
       const offset = ref.current.offsetTop - HEADER_HEIGHT;
       window.scrollTo({
         top: offset,

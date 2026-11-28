@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.iconBar}>
-        <img src="/header_logo.svg" alt="로고" />
+        <img src="/logo_ehyun.png" alt="로고" />
       </div>
       <div className={styles.underline}></div>
       <div className={styles.infoBox}>

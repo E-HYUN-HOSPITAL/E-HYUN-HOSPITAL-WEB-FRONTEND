@@ -57,7 +57,7 @@ export const Header = ({ sectionRefs, activeSection, handleScroll }: Props) => {
     >
       <div className={styles.topBar}>
         <img
-          src="/header_logo.svg"
+          src="/logo_ehyun.png"
           alt="메인 로고"
           className={styles.logo}
           onClick={goHome}
