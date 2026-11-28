@@ -47,3 +47,14 @@ export const trackKakaoClick = () => {
     }
   });
 };
+
+/** naver booking click */
+export const trackNaverBookingClick = () => {
+  safe(() => window.gtag?.("event", "naver_booking_click"));
+  safe(() => window.fbq?.("track", "Contact", { method: "naver_booking" }));
+};
+
+/** directions click */
+export const trackDirectionsClick = () => {
+  safe(() => window.gtag?.("event", "directions_click"));
+};
