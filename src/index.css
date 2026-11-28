@@ -1,4 +1,14 @@
 /* src/index.css 또는 src/App.css */
+:root {
+  /* 상단 헤더 높이 (기존 8rem / 모바일 5rem → 절반 수준으로 축소) */
+  --header-height: 4.5rem;
+}
+@media (max-width: 768px) {
+  :root {
+    --header-height: 2.75rem;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
 
 @font-face {

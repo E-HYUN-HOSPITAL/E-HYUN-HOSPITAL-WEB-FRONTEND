@@ -36,7 +36,7 @@ const SKIN_EQUIPMENT: EquipmentItem[] = [
 
 const CarePage = () => {
   return (
-    <div style={{ paddingTop: "8rem" }}>
+    <div style={{ paddingTop: "var(--header-height)" }}>
       <Header
         sectionRefs={dummyRefs}
         activeSection=""

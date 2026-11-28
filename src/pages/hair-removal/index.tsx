@@ -43,7 +43,7 @@ const dummyRefs = {
 
 const HairRemovalPage = () => {
   return (
-    <div style={{ paddingTop: "8rem" }}>
+    <div style={{ paddingTop: "var(--header-height)" }}>
       <Header
         sectionRefs={dummyRefs}
         activeSection=""
