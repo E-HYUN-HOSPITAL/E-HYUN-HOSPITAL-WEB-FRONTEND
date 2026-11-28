@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./header.module.scss";
 import { HEADER_MENU, type SubMenuItem } from "../../../data/menu";
@@ -19,6 +19,15 @@ type Props = {
 
 export const Header = ({ sectionRefs, activeSection, handleScroll }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  // 모바일 메뉴가 열려 있는 동안 뒤 페이지 스크롤 잠금
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -42,10 +51,12 @@ export const Header = ({ sectionRefs, activeSection, handleScroll }: Props) => {
       }
 
       setIsHovered(false);
+      setMobileOpen(false);
     } else if (item.type === "link") {
       e.preventDefault();
       navigate(item.key);
       setIsHovered(false);
+      setMobileOpen(false);
     }
   };
 
@@ -78,7 +89,51 @@ export const Header = ({ sectionRefs, activeSection, handleScroll }: Props) => {
             </li>
           ))}
         </ul>
+
+        <button
+          type="button"
+          className={`${styles.hamburger} ${mobileOpen ? styles.open : ""}`}
+          aria-label={mobileOpen ? "메뉴 닫기" : "메뉴 열기"}
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen((v) => !v)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
+
+      {/* 모바일 전체 메뉴 */}
+      <nav
+        className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileMenuOpen : ""}`}
+        aria-hidden={!mobileOpen}
+      >
+        {HEADER_MENU.map((mainItem) => (
+          <section key={mainItem.key} className={styles.mobileSection}>
+            <h3 className={styles.mobileSectionTitle}>{mainItem.label}</h3>
+            <ul className={styles.mobileList}>
+              {mainItem.children.map((subItem) => (
+                <li key={subItem.label}>
+                  <a
+                    href={subItem.type === "link" ? subItem.key : "/"}
+                    className={`${styles.mobileLink} ${
+                      subItem.type === "link" &&
+                      location.pathname.replace(/\/$/, "") ===
+                        subItem.key.replace(/\/$/, "")
+                        ? styles.mobileLinkActive
+                        : ""
+                    }`}
+                    tabIndex={mobileOpen ? 0 : -1}
+                    onClick={(e) => handleMenuClick(e, subItem)}
+                  >
+                    {subItem.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </nav>
 
       <div className={styles.dropdownContainer}>
         <div className={styles.dropdownContent}>

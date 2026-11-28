@@ -43,7 +43,7 @@ export const MobileBottomBar = () => {
           <span>네이버예약</span>
         </a>
         <a
-          className={styles.item}
+          className={`${styles.item} ${styles.pink}`}
           href={CONTACT.directions}
           target="_blank"
           rel="noopener noreferrer"
