@@ -41,3 +41,9 @@ img {
   -ms-user-drag: none;
   user-drag: none;
 }
+
+/* 일부 시술 페이지가 모바일 화면보다 넓어 옆으로 밀리던 문제 방지 */
+html,
+body {
+  overflow-x: clip;
+}

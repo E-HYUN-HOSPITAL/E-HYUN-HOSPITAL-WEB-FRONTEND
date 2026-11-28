@@ -140,17 +140,26 @@
   }
 
   .topBar {
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .logo {
     height: 1.75rem;
-    margin: 0 1rem;
+    margin: 0;
   }
 
   .hamburger {
     display: flex;
-    margin-right: 1.5rem;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    margin-top: -10px;
+    width: 26px;
+    height: 20px;
+
+    span {
+      height: 2px;
+    }
 
     &.open span:nth-child(1) {
       transform: translateY(9px) rotate(45deg);
@@ -167,6 +176,85 @@
   .dropdownContainer {
     display: none !important;
   }
+
+  .mobileMenu {
+    display: block;
+  }
+}
+
+/* ---------- 모바일 전체 메뉴 ---------- */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  background: #ffffff;
+  border-top: 1px solid #eeeeee;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 1.25rem calc(80px + env(safe-area-inset-bottom));
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s;
+}
+
+.mobileMenuOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobileSection {
+  padding: 1.1rem 0 0.9rem;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.mobileSectionTitle {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9a9a9a;
+  letter-spacing: -0.01em;
+}
+
+.mobileList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+}
+
+.mobileLink {
+  display: block;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.mobileLinkActive {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .hamburger {
@@ -187,5 +275,16 @@
     background-color: #333;
     border-radius: 10px;
     transition: all 0.3s linear;
+  }
+}
+
+// 기본 .hamburger/.mobileMenu(display:none)가 위 미디어쿼리보다 뒤에 있어 모바일에서 덮어쓰던 문제 → 파일 끝에서 다시 켬
+@media (max-width: 768px) {
+  .hamburger,
+  .mobileMenu {
+    display: flex;
+  }
+  .mobileMenu {
+    display: block;
   }
 }

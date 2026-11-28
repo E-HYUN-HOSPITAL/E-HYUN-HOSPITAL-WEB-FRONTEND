@@ -22,7 +22,7 @@ $bar-height: 64px;
     height: $bar-height;
     padding-bottom: env(safe-area-inset-bottom);
     background: #ffffff;
-    border-top: 1px solid #e8e2de;
+    border-top: 1px solid #e5e5e5;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
   }
 
@@ -32,14 +32,14 @@ $bar-height: 64px;
     align-items: center;
     justify-content: center;
     gap: 4px;
-    color: #70605a;
+    color: #1f1f1f;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 
     &:active {
-      background: #f5f2ef;
+      background: #f2f2f2;
     }
   }
 
@@ -52,12 +52,23 @@ $bar-height: 64px;
     }
   }
 
-  .primary {
-    background: #70605a;
+  // 길찾기: 병원 이벤트 이미지 로즈 핑크
+  .pink {
+    background: #b8435a;
     color: #ffffff;
 
     &:active {
-      background: #5e504b;
+      background: #9e3a4e;
+    }
+  }
+
+  // 네이버 브랜드 그린
+  .primary {
+    background: #03c75a;
+    color: #ffffff;
+
+    &:active {
+      background: #02a84c;
     }
   }
 }
