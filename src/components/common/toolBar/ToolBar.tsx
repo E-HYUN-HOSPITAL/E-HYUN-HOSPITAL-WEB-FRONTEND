@@ -10,13 +10,15 @@ type Props = {
 export const ToolBar = ({ onClick }: Props) => {
   return (
     <div className={styles.container}>
-      <GoKakaoBtn
-        onClick={
-          onClick ||
-          (() => window.open("https://pf.kakao.com/_hKrHn", "_blank"))
-        }
-      />
-      <EtcInfoBox />
+      <div className={styles.desktopOnly}>
+        <GoKakaoBtn
+          onClick={
+            onClick ||
+            (() => window.open("https://pf.kakao.com/_hKrHn", "_blank"))
+          }
+        />
+        <EtcInfoBox />
+      </div>
       <GoTopScreenBtn />
     </div>
   );

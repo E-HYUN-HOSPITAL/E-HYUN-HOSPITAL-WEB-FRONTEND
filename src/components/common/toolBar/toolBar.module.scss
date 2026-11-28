@@ -9,3 +9,21 @@
   gap: 1rem;
   z-index: 10;
 }
+
+.desktopOnly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+// 모바일에서는 하단 고정바가 카톡·지도를 대신하므로 맨위로 버튼만 남김
+@media (max-width: 768px) {
+  .container {
+    bottom: calc(64px + 1rem + env(safe-area-inset-bottom));
+    right: 1rem;
+  }
+  .desktopOnly {
+    display: none;
+  }
+}

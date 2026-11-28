@@ -47,7 +47,8 @@ export const MainPopup = () => {
           top: `${100 + index * 40}px`,
           left: `${50 + index * 40}px`,
           zIndex: 2000 + index,
-        };
+          "--i": index,
+        } as React.CSSProperties;
         return (
           <div
             key={popup.id}
